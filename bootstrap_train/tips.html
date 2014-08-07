@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .bs-example {
+            position: relative;
+            padding: 45px 15px 15px;
+            margin: 0 -15px 15px;
+            background-color: #fafafa;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+            border-color: #e5e5e5 #eee #eee;
+            border-style: solid;
+            border-width: 1px 0;
+        }
+        .bs-example {
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #fff;
+            border: 1px #ddd;
+            border-radius: 4px 4px 0 0;
+            box-shadow: none;
+            border-style:solid;
+        }
+        .bs-example:after {
+            content: "Example";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .bs-example .popover {
+            position: relative;
+            display: block;
+            float: left;
+            width: 260px;
+            margin: 20px;
+        }
+
+        .bs-example > .btn, .bs-example > .btn-group {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .bs-example-tooltips {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1 class="page-header text-center">工具提示</h1>
+
+<div class="container">
+    <div class="row">
+        <h3>提示-四个展示方位</h3>
+
+        <div class="col-md-12">
+            <a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title=""
+                    data-original-title="Tooltip on left">左侧Tooltip
+            </button>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title=""
+                    data-original-title="Tooltip on top">上方Tooltip
+            </button>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title=""
+                    data-original-title="Tooltip on bottom">下方Tooltip
+            </button>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title=""
+                    data-original-title="Tooltip on right">右侧Tooltip
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <h3>弹出框 popover.js</h3>
+
+        <div id="custPopover" class="bs-example" style="position: relative;padding:10px;">
+            <div class="popover top" style="display: block;">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Popover top</h3>
+
+                <div class="popover-content">
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+                        venenatis vestibulum.</p>
+                </div>
+            </div>
+
+            <div class="popover right" style="display: block;">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Popover right</h3>
+
+                <div class="popover-content">
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+                        venenatis vestibulum.</p>
+                </div>
+            </div>
+
+            <div class="popover bottom" style="display: block;">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Popover bottom</h3>
+
+                <div class="popover-content">
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+                        venenatis vestibulum.</p>
+                </div>
+            </div>
+
+            <div class="popover left" style="display: block;">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Popover left</h3>
+
+                <div class="popover-content">
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+                        venenatis vestibulum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>动态演示</h2>
+
+        <div class="bs-example" style="padding-bottom: 24px;">
+            <a href="#" class="btn btn-lg btn-danger" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
+        </div>
+    </div>
+    <div class="row">
+        <h3>四个方向</h3>
+
+        <div class="bs-example tooltip-demo">
+            <div class="bs-example-tooltips">
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    左侧弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    上方弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    下方弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    右侧弹框
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popover fade top in" style="top: 18225px; left: 640.5px; display: block;">
+    <div class="arrow"></div>
+    <h3 class="popover-title" style="display: none;"></h3>
+
+    <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div>
+</div>
+<div class="popover fade bottom in" style="top: 18321px; left: 726.5px; display: block;">
+    <div class="arrow"></div>
+    <h3 class="popover-title" style="display: none;"></h3>
+
+    <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div>
+</div>
+<div class="popover fade right in" style="top: 18273px; left: 991.5px; display: block;">
+    <div class="arrow"></div>
+    <h3 class="popover-title" style="display: none;"></h3>
+
+    <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div>
+</div>
+<div class="popover fade left in" style="top: 18273px; left: 375.5px; display: block;">
+    <div class="arrow"></div>
+    <h3 class="popover-title" style="display: none;"></h3>
+
+    <div class="popover-content">Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    !function ($) {
+
+        $(function () {
+
+            $('a,button').bind('mouseover', function () {
+                $(this).tooltip('show');
+            });
+
+            // popover demo
+            $("[data-toggle=popover]").popover();
+
+        });
+
+    }(jQuery)
+
+</script>
+</body>
+</html>

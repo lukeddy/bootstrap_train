@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+
+<input type='checkbox' id='in-shareuser-10' name='shareuser[]' value='10' />UserA
+<input type='checkbox' id='in-shareuser-11' name='shareuser[]' value='11' />UserB
+<input type='checkbox' id='in-shareuser-12' name='shareuser[]' value='12' />UserC
+
+<input type="button" id="selectall" name="selectall" value="全选" />
+<input type="button" id="deselectall" name="deselectall" value="取消全选" />
+</body>
+</html>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(function() {
+    $("#selectall").click(function() {
+        $("input[name='shareuser[]']").each(function() {
+            $(this).attr("checked", true);
+        });
+    });
+    $("#deselectall").click(function() {
+        $("input[name='shareuser[]']").each(function() {
+            $(this).attr("checked", false);
+        });
+    });
+});
+</script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h2>多选框值交换</h2>
+<table>
+    <tr>
+        <td>
+            <select size='10' multiple id="selectLeft" style="width:200px">
+                <option value="0">Jquery API</option>
+                <option value="1">JavaScript高级程序设计</option>
+                <option value="2">锋利的jQuery</option>
+                <option value="3">JavaScript 设计模式</option>
+                <option value="4">JavaScript+DOM高级程序设计</option>
+                <option value="5">PHP高级程序设计</option>
+                <option value="6">面向对象程序设计</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" value=" >> " id="toRight" /><br /><br />
+            <input type="button" value=" << " id="toLeft" />
+        </td>
+        <td>
+            <select size='10' multiple id="selectRight" style="width:200px">
+            </select>
+        </td>
+    </tr>
+</table>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+    $(document).ready(function() {
+        $("#toRight").click(function(){
+            $("#selectLeft option:selected").each(function(){
+                $("#selectRight").append("<option value=" + $(this).val() + " selected>" + $(this).html() + "</option>");
+                $(this).remove();
+            });
+        });
+
+        $("#toLeft").click(function(){
+            $("#selectRight option:selected").each(function(){
+                $("#selectLeft").append("<option value=" + $(this).val() + ">" + $(this).html() + "</option>");//这个方法是默认在后面添加
+                //$("#selectLeft option:first").before("<option value=" + $(this).val() + ">" + $(this).html() + "</option>"); //此种方法是在select前面加内容
+                //$("#selectLeft option[value=3]").before("<option value=" + $(this).val() + ">" + $(this).html() + "</option>"); //此种方法是在selectt指定某一行加内容
+                $(this).remove();
+            });
+        });
+
+    });
+</SCRIPT>
+</body>
+</html>

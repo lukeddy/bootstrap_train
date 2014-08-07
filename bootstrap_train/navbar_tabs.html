@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="page-header text-center" style="margin-top:100px;">导航条中嵌入Tab</h1>
+<div class="container">
+
+    <div class="row">
+        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <ul id="myTab2" class="nav nav-tabs" style="margin-top:7px;">
+                <li class="active"><a href="#home2" data-toggle="tab">Home</a></li>
+                <li class=""><a href="#profile2" data-toggle="tab">Profile</a></li>
+                <li class="dropdown">
+                    <a href="#" id="myTabDrop2" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
+                            class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                        <li class=""><a href="#dropdown21" tabindex="-1" data-toggle="tab">@fat</a></li>
+                        <li class=""><a href="#dropdown22" tabindex="-1" data-toggle="tab">@mdo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <form class="navbar-form navbar-left" role="search" style="margin-top:0px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </li>
+                <li class="pull-right">
+                    <ul class="nav nav-tabs">
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="myTabContent2" class="tab-content">
+            <div class="tab-pane fade active in" id="home2">
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                    retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                    Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry
+                    richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+                    apparel, butcher voluptate nisi qui.</p>
+                <!-- Main component for a primary marketing message or call to action -->
+                <div class="row">
+                    <div class="jumbotron">
+                        <h1>Navbar example</h1>
+
+                        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top
+                            navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and
+                            device.</p>
+
+                        <p>
+                            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar
+                                docs &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul id="myTab4" class="nav nav-pills nav-stacked">
+                            <li class="active"><a href="#home4" data-toggle="tab">Home</a></li>
+                            <li class=""><a href="#profile4" data-toggle="tab">Profile</a></li>
+                            <li class="dropdown">
+                                <a href="#" id="myTabDrop4" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
+                                        class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                    <li class=""><a href="#dropdown41" tabindex="-1" data-toggle="tab">@fat</a></li>
+                                    <li class=""><a href="#dropdown42" tabindex="-1" data-toggle="tab">@mdo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="myTabContent4" class="tab-content">
+                            <div class="tab-pane fade active in" id="home4">
+                                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                    retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                                    Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure
+                                    terry
+                                    richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+                                    apparel, butcher voluptate nisi qui.</p>
+                            </div>
+                            <div class="tab-pane fade" id="profile4">
+                                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                    Exercitation
+                                    +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                                    farm-to-table
+                                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+                                    ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus
+                                    mollit.
+                                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack
+                                    odio
+                                    cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson
+                                    biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus
+                                    tattooed
+                                    echo park.</p>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown41">
+                                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                                    retro
+                                    fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                                    iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy
+                                    irony.
+                                    Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+                                    pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard
+                                    of
+                                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown42">
+                                <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out
+                                    master
+                                    cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art
+                                    party
+                                    locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi
+                                    before
+                                    they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache
+                                    readymade
+                                    thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park
+                                    vegan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile2">
+                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation
+                    +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+                    craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+                    ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                    Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio
+                    cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson
+                    biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed
+                    echo park.</p>
+
+                <div class="row">
+                    <h3>有意义的替换-不同颜色</h3>
+
+                    <div class="col-md-3">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body">
+                                Donec id elit non mi porta gravida at eget metus.
+                                Maecenas sed diam eget risus varius blandit.
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body">
+                                Donec id elit non mi porta gravida at eget metus.
+                                Maecenas sed diam eget risus varius blandit.
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body">
+                                Donec id elit non mi porta gravida at eget metus.
+                                Maecenas sed diam eget risus varius blandit.
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body">
+                                Donec id elit non mi porta gravida at eget metus.
+                                Maecenas sed diam eget risus varius blandit.
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">Panel heading</div>
+                            <div class="panel-body">
+                                Donec id elit non mi porta gravida at eget metus.
+                                Maecenas sed diam eget risus varius blandit.
+                            </div>
+                            <div class="panel-footer">Panel footer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="dropdown21">
+                <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
+                    fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                    iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                    Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+                    pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                    them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+
+                <div class="row">
+                    <table class="table table-striped table-bordered table-hover table-condensed">
+                        <caption>行的可选类
+                            使用下列类可以使行的背景色变化，从而表达一定含义。
+                            向tr添加.success、.error、.warning、.info。
+                        </caption>
+                        <thead>
+                        <tr>
+                            <th>TH1</th>
+                            <th>TH2</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td>TD1</td>
+                            <td>TD2</td>
+                        </tr>
+                        <tr class="error">
+                            <td>TD1</td>
+                            <td>TD2</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>TD1</td>
+                            <td>TD2</td>
+                        </tr>
+                        <tr class="info">
+                            <td>TD1</td>
+                            <td>TD2</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="dropdown22">
+                <div class="jumbotron">
+                    <h1>Navbar example</h1>
+
+                    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top
+                        navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and
+                        device.</p>
+
+                    <p>
+                        <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar
+                            docs &raquo;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

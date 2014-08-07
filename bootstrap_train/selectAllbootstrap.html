@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="page-header text-center">Header</h1>
+<div class="container">
+    <div class="control-group">
+        <div class="controls">
+            <div class="input">
+                <div class="btn-group" >
+                    <label class="btn  btn-toggle" for="colors-1-toggle-0">
+                        <input type="checkbox" id="colors-1-toggle-0" name="colors-1[]" value="color_c" />C
+                    </label>
+                    <label class="btn  btn-toggle" for="colors-1-toggle-1">
+                        <input type="checkbox" id="colors-1-toggle-1" name="colors-1[]" value="color_m" />M
+                    </label>
+                    <label class="btn  btn-toggle" for="colors-1-toggle-2">
+                        <input type="checkbox" id="colors-1-toggle-2" name="colors-1[]" value="color_y" />Y
+                    </label>
+                    <label class="btn  btn-toggle" for="colors-1-toggle-3">
+                        <input type="checkbox" id="colors-1-toggle-3" name="colors-1[]" value="color_k" />K
+                    </label>
+                </div>
+            </div>
+            <button id="toggle-all" class="btn btn-info">Select All</button>
+            <button id="untoggle-all" class="btn btn-info">Unselect All</button>
+        </div></div>
+</div>
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+   $(function(){
+       $('#toggle-all').click(function() {
+           $('.btn-group input[type="checkbox"]').prop('checked', true);
+       });
+       $('#untoggle-all').click(function() {
+           $('.btn-group input[type="checkbox"]').prop('checked', false);
+       });
+   });
+
+</script>
+</body>
+</html>

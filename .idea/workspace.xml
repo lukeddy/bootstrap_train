@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e66fb3f7-bb0f-4dad-9227-c33bd8c9be80" name="Default" comment="" />
+    <ignored path="bootstrap_train.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="bootstrap_train" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="blog.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap_train/blog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dialog.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bootstrap_train/dialog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="35" selection-start="845" selection-end="845" vertical-scroll-proportion="0.5973054" vertical-offset="0" max-vertical-offset="2261">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/bootstrap_train/dropdown.html" />
+        <option value="$PROJECT_DIR$/dropdown2.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/dropdown2.html" />
+        <option value="$PROJECT_DIR$/scrolltest.html" />
+        <option value="$PROJECT_DIR$/checkedAll.html" />
+        <option value="$PROJECT_DIR$/checkedAll2.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/submitform_by_click_link.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/selectAllbootstrap.html" />
+        <option value="$PROJECT_DIR$/jquery_train/template.html" />
+        <option value="$PROJECT_DIR$/jquery_train/slideToggle.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/dialog2.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/dialog.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/scrollspy.html" />
+        <option value="$PROJECT_DIR$/jquery_train/multiple_select_exchange_values.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/navbar-fixed-top2.html" />
+        <option value="$PROJECT_DIR$/bootstrap_train/blog.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap_train" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/phone_weixin" />
+    <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="recentsLimit" value="5" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\dev\work\bootstrap_train\jquery_train" />
+      <recent name="E:\dev\work\bootstrap_train" />
+      <recent name="E:\dev\work\bootstrap_train\bootstrap_train" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\dev\work\bootstrap_train\bootstrap_train" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.template.html">
+    <configuration default="false" name="template.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/bootstrap_train/jquery_train/template.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.template.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.template.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e66fb3f7-bb0f-4dad-9227-c33bd8c9be80" name="Default" comment="" />
+      <created>1400725663559</created>
+      <updated>1400725663559</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26323318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39972338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33009708" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="87" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.0" vertical-offset="1633" max-vertical-offset="3990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrolltest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="9" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form_demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="9" selection-start="785" selection-end="1786" vertical-scroll-proportion="0.0" vertical-offset="1045" max-vertical-offset="1577" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/accordions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="9" selection-start="658" selection-end="1555" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2641" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="6" selection-start="54887" selection-end="54887" vertical-scroll-proportion="0.0" vertical-offset="5358" max-vertical-offset="7714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="21" selection-start="8945" selection-end="8945" vertical-scroll-proportion="0.0" vertical-offset="4427" max-vertical-offset="6479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="87" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.0" vertical-offset="1633" max-vertical-offset="3990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrolltest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="9" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="6" selection-start="54887" selection-end="54887" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="21" selection-start="8945" selection-end="8945" vertical-scroll-proportion="0.0" vertical-offset="4427" max-vertical-offset="6479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="6" selection-start="54887" selection-end="54887" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="21" selection-start="8945" selection-end="8945" vertical-scroll-proportion="0.0" vertical-offset="4427" max-vertical-offset="6479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="412" max-vertical-offset="1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="6" selection-start="54887" selection-end="54887" vertical-scroll-proportion="0.0" vertical-offset="5358" max-vertical-offset="7714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="0" selection-start="7206" selection-end="7206" vertical-scroll-proportion="0.0" vertical-offset="3686" max-vertical-offset="6156" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="6" selection-start="54887" selection-end="54887" vertical-scroll-proportion="0.0" vertical-offset="5358" max-vertical-offset="7714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0" vertical-offset="608" max-vertical-offset="1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="694" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="87" selection-start="5833" selection-end="5833" vertical-scroll-proportion="0.0" vertical-offset="1633" max-vertical-offset="3990" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrolltest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="9" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form_demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1815" selection-end="2348" vertical-scroll-proportion="0.0" vertical-offset="1121" max-vertical-offset="1577" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/accordions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="45" selection-start="4162" selection-end="4162" vertical-scroll-proportion="0.0" vertical-offset="1558" max-vertical-offset="2641" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="2356" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/btn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="27" selection-start="74" selection-end="99" vertical-scroll-proportion="-2.7142856" vertical-offset="0" max-vertical-offset="1178" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkedAll2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="53" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="5852" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkedAll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="108" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/submitform_by_click_link.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="7" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/selectAllbootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="7" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="10" selection-start="707" selection-end="1251" vertical-scroll-proportion="-12.892858" vertical-offset="209" max-vertical-offset="1197" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery_train/jquery/jquery-1.11.0.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="96381" selection-end="96381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="190" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery_train/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery_train/slideToggle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="51" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dialog2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="89" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="17" selection-start="1319" selection-end="2209" vertical-scroll-proportion="0.0" vertical-offset="893" max-vertical-offset="1501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/scrollspy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1100" column="37" selection-start="28407" selection-end="28407" vertical-scroll-proportion="1.2564886" vertical-offset="20077" max-vertical-offset="23028" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery_train/multiple_select_exchange_values.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.10076336" vertical-offset="675" max-vertical-offset="1330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/navbar-fixed-top2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="6" selection-start="698" selection-end="2556" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1558" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1572" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="644" max-vertical-offset="5700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/navbar-fixed-top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="17" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1558" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1817" selection-end="2108" vertical-scroll-proportion="0.21011059" vertical-offset="760" max-vertical-offset="6479" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery_train/overflow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="31" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" vertical-offset="475" max-vertical-offset="684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/tips.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="90" selection-start="3312" selection-end="3312" vertical-scroll-proportion="-2.7709923" vertical-offset="3639" max-vertical-offset="4294" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap_train/dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="35" selection-start="845" selection-end="845" vertical-scroll-proportion="0.5973054" vertical-offset="0" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

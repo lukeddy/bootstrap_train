@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div id="objDiv" style="width:400px;height:300px;background:red">鼠标移上来滚动条滑轮看看</div>
+<script type="text/javascript">
+    var scrollFunc=function(e){
+        e=e||window.event;
+        if (e&&e.preventDefault){
+            e.preventDefault();
+            e.stopPropagation();
+        }else{
+            e.returnvalue=false;
+            return false;
+        }
+    }
+    var obj=document.getElementById("objDiv");
+    if(obj.addEventListener&&!window.opera)
+        obj.addEventListener('DOMMouseScroll',scrollFunc,false);
+    else
+        obj.onmousewheel=scrollFunc;
+</script>
+<script>
+    //创建500个换行<br>测试一下！
+    for (var i=0 ;i<500;i++){
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

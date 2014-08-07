@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Jquery利用mouseenter和mouseleave实现鼠标经过弹出层且可以点击</title>
+    <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ps = $("#div_pro").position();
+            $("#float_box").css("position", "absolute");
+            $("#float_box").css("left", ps.left + 20); //距离左边距
+            $("#float_box").css("top", ps.top + 20); //距离上边距
+            $("#div_pro").mouseenter(function () {
+                $("#float_box").show();
+            });
+            $("#float_box").mouseleave(function () {
+                $("#float_box").hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <a href="#" id="div_pro">广东省</a>
+    </div>
+    <div id="float_box" style="display:none;">
+        <a href="#">深圳市</a>    
+        <a href="#">广州市</a>
+        <a href="#">东莞市</a>
+    </div>
+</body>
+</html>

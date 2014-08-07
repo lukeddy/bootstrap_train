@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="page-header text-center">警告框</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>四种警告框</h3>
+            <div class="alert alert-success"><strong>Well done!</strong> You successfully read this important alert message.</div>
+            <div class="alert alert-info"><strong>Heads up!</strong> This alert needs your attention, but it's not super important.</div>
+            <div class="alert alert-warning"><strong>Warning!</strong> Best check yo self, you're not looking too good.</div>
+            <div class="alert alert-danger"><strong>Oh snap!</strong> Change a few things up and try submitting again.</div>
+        </div>
+        <div class="col-md-4">
+            <h3>可关闭的警告框</h3>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+            <div class="alert alert-info alert-dismissable">
+                <input type="button" value="&times;" class="close" data-dismiss="alert" aria-hidden="true"/>
+                <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </div>
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong> Best check yo self, you're not looking too good.
+            </div>
+            <div class="alert alert-danger alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h3>警告框中的链接</h3>
+            <div class="alert alert-success"><strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message.</a></div>
+            <div class="alert alert-info"><strong>Heads up!</strong> This alert needs your <a href="#" class="alert-link">attention</a>, but it's not super important.</div>
+            <div class="alert alert-warning"><strong>Warning!</strong> Best <a href="#" class="alert-link">check yo self</a>, you're not looking too good.</div>
+            <div class="alert alert-danger"><strong>Oh snap!</strong> Change a few things up and try <a href="#" class="alert-link">submitting</a> again.</div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
