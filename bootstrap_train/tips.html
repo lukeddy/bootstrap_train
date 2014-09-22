@@ -66,6 +66,19 @@
         .bs-example-tooltips {
             text-align: center;
         }
+        span[data-help="true"]:after{
+            content: "!";
+            font-size: 16px;
+            line-height: 22px;
+            border: 1px solid #ccc;
+            padding: 2px 8px;
+            border-radius: 26px;
+            margin: 10px 0;
+        }
+       .tooltip-inner{
+            text-align: left;
+            padding:10px;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +89,8 @@
         <h3>提示-四个展示方位</h3>
 
         <div class="col-md-12">
-            <a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
+            <a href="#" data-toggle="tooltip" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.">Hover over me</a>
+            <span href="#" data-help="true" data-toggle="tooltip" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
             <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title=""
                     data-original-title="Tooltip on left">左侧Tooltip
             </button>
@@ -205,9 +219,11 @@
 
         $(function () {
 
-            $('a,button').bind('mouseover', function () {
+            $('span,a,button').bind('mouseover', function () {
                 $(this).tooltip('show');
             });
+
+            // $('span,a,button').tooltip('show');
 
             // popover demo
             $("[data-toggle=popover]").popover();
