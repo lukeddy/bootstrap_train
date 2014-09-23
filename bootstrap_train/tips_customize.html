@@ -145,29 +145,20 @@
     <div class="row">
       <h3>popover中使用html</h3>
 
-      <!-- Popover Example 1 - HTML -->
-      <!-- Popover using HTML to set content and title --> 
-
-      <!-- Still requires at least $("[data-toggle=popover]").popover(); to enabled it via JavaScript! -->
-      <!-- Alternatively, you can use id="myPopover" or class="myPopover" no need to use data-toggle tag (!) -->
-      <!-- Just remember to change JavaScript to e.g., $("#myPopover").popover(); in those cases, see example 2 -->
       <a href="#" 
         data-toggle="popover" 
         data-html="true" 
         data-content="<div><b style='color:red;'>Popover Example</b> 1 - Content</div>"
         title="Popover Example <b>1</b> - Title">Popover Example 1</a>
 
-      <br /><br />
+      <br/>
+      <br/>
 
-      <!-- Popover Example 2 - JS -->
-      <!-- Popover using JavaScript to set content from hidden div --> 
       <a href="#" id="popoverExampleTwo">Popover Example 2</a>
-      <!-- Popover 2 hidden content -->
       <div id="popoverExampleTwoHiddenContent" style="display: none">
          <div><b>Popover Example</b> 2 - Content</div>
          <img src='../images/flower.jpg' style='width:100%;'/>
       </div>  
-      <!-- Popover 2 hidden title -->
       <div id="popoverExampleTwoHiddenTitle" style="display: none">
          Popover Example <b>2</b> - Title
       </div>
