@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .bs-example {
+            position: relative;
+            padding: 45px 15px 15px;
+            margin: 0 -15px 15px;
+            background-color: #fafafa;
+            box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+            border-color: #e5e5e5 #eee #eee;
+            border-style: solid;
+            border-width: 1px 0;
+        }
+        .bs-example {
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #fff;
+            border: 1px #ddd;
+            border-radius: 4px 4px 0 0;
+            box-shadow: none;
+            border-style:solid;
+        }
+        .bs-example:after {
+            content: "Example";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-danger {
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .bs-example .popover {
+            position: relative;
+            display: block;
+            float: left;
+            width: 260px;
+            margin: 20px;
+        }
+
+        .bs-example > .btn, .bs-example > .btn-group {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .bs-example-tooltips {
+            text-align: center;
+        }
+        span[data-help="true"]:after{
+            content: "!";
+            font-size: 16px;
+            line-height: 22px;
+            border: 1px solid #ccc;
+            padding: 2px 8px;
+            border-radius: 26px;
+            margin: 10px 0;
+        }
+       .tooltip-inner{
+            text-align: left;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="page-header text-center">工具提示</h1>
+
+<div class="container">
+    <div class="row">
+        <h3>提示-四个展示方位</h3>
+        <div class="col-md-12">
+            <span href="#" data-help="true" data-toggle="tooltip" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
+            <span href="#" data-help="true" data-toggle="tooltip" data-placement="top" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
+            <span href="#" data-help="true" data-toggle="tooltip" data-placement="left" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
+            <span href="#" data-help="true" data-toggle="tooltip" data-placement="right" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
+            <span href="#" data-help="true" data-toggle="tooltip" data-placement="bottom" title="first tooltip,Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."></span>
+            <!--html内容,将data-html属性设置为true-->
+            <span href="#" 
+              data-help="true" 
+              data-toggle="tooltip" 
+              data-placement="bottom" 
+              data-html="true"
+              title="<ul><li>我是内容1</li><li>我是内容2</li><li>我是内容3</li><li>我是内容4</li></ul>我是其他内容<img src='../images/flower.jpg' style='width:100%;'/>"></span>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <h3>四个方向</h3>
+        <div class="bs-example tooltip-demo">
+            <div class="bs-example-tooltips">
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    左侧弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    上方弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    下方弹框
+                </button>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                        data-placement="right" data-content="<small>Vivamus</small> sagittis lacus vel augue laoreet rutrum faucibus."
+                        data-original-title="" title="">
+                    右侧弹框
+                </button>
+                <button type="button" class="btn btn-default" 
+                        data-container="body" 
+                        data-toggle="popover"
+                        data-placement="right" 
+                        data-html="true"
+                        data-content="<small style='color:red;'>Vivamus</small> sagittis lacus vel augue laoreet rutrum faucibus.<img src='../images/flower.jpg' style='width:100%;'/>"
+                        data-original-title="" 
+                        title="">
+                    html弹框
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <h3>popover中使用html</h3>
+
+      <!-- Popover Example 1 - HTML -->
+      <!-- Popover using HTML to set content and title --> 
+
+      <!-- Still requires at least $("[data-toggle=popover]").popover(); to enabled it via JavaScript! -->
+      <!-- Alternatively, you can use id="myPopover" or class="myPopover" no need to use data-toggle tag (!) -->
+      <!-- Just remember to change JavaScript to e.g., $("#myPopover").popover(); in those cases, see example 2 -->
+      <a href="#" 
+        data-toggle="popover" 
+        data-html="true" 
+        data-content="<div><b style='color:red;'>Popover Example</b> 1 - Content</div>"
+        title="Popover Example <b>1</b> - Title">Popover Example 1</a>
+
+      <br /><br />
+
+      <!-- Popover Example 2 - JS -->
+      <!-- Popover using JavaScript to set content from hidden div --> 
+      <a href="#" id="popoverExampleTwo">Popover Example 2</a>
+      <!-- Popover 2 hidden content -->
+      <div id="popoverExampleTwoHiddenContent" style="display: none">
+         <div><b>Popover Example</b> 2 - Content</div>
+         <img src='../images/flower.jpg' style='width:100%;'/>
+      </div>  
+      <!-- Popover 2 hidden title -->
+      <div id="popoverExampleTwoHiddenTitle" style="display: none">
+         Popover Example <b>2</b> - Title
+      </div>
+</div>
+</div>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    !function ($) {
+
+        $(function () {
+
+            $('span,a,button').bind('mouseover', function () {
+                $(this).tooltip('show');
+            });
+
+            // $('span,a,button').tooltip('show');
+
+            // popover demo
+            $("[data-toggle=popover]").popover();
+
+            // Enabling Popover Example 2 - JS (hidden content and title capturing)
+            $("#popoverExampleTwo").popover({
+                html : true, 
+                content: function() {
+                  return $('#popoverExampleTwoHiddenContent').html();
+                },
+                title: function() {
+                  return $('#popoverExampleTwoHiddenTitle').html();
+                }
+            });
+
+        });
+
+    }(jQuery)
+
+</script>
+</body>
+</html>
