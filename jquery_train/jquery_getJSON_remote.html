@@ -15,6 +15,8 @@
 <body>
 <h2>Jqueryl练习</h2>
 <input type="button" name="" id="callRemoteData" value="调用远程数据"/>
+<input type="button" name="" id="callRemoteData2" value="调用远程数据2"/>
+
 <div id="resultBox" style="width:200px;height:200px;border:1px solid tomato;background:rgba(213,21,34,0.5);">
     
 </div>
@@ -26,6 +28,7 @@
 <script>
     $(document).ready(function(){
         callRemoteData();
+        callRemoteData2();
     });
 
 
@@ -40,8 +43,20 @@
         });
     }
 
-    function jsonpCallbackFunc(){
-        alert("aaa");
+    function callRemoteData2(){
+        $('#callRemoteData2').click(function(){
+            $.ajax({  
+                url:"http://api.map.baidu.com/telematics/v3/weather?location=%E5%8C%97%E4%BA%AC&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ",  
+                dataType:'jsonp',  
+                data:'',  
+                jsonp:'callback',  
+                success:function(data) {  
+                    console.log(data) ;
+                    $('#resultBox').html(data.results[0].index[0].des);
+                },  
+                timeout:3000  
+            });  
+        });
     }
 </script>
 </body>
