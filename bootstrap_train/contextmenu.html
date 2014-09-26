@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="page-header text-center">ContextMenu-点击鼠标右键菜单</h1>
+<div class="container">
+    <table id="myTable" class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" style="display:none" >
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a tabindex="-1" href="#">Separated link</a></li>
+</ul>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    (function ($, window) {
+
+    $.fn.contextMenu = function (settings) {
+
+        return this.each(function () {
+
+            // Open context menu
+            $(this).on("contextmenu", function (e) {
+                //open menu
+                $(settings.menuSelector)
+                    .data("invokedOn", $(e.target))
+                    .show()
+                    .css({
+                        position: "absolute",
+                        left: getLeftLocation(e),
+                        top: getTopLocation(e)
+                    })
+                    .off('click')
+                    .on('click', function (e) {
+                        $(this).hide();
+                
+                        var $invokedOn = $(this).data("invokedOn");
+                        var $selectedMenu = $(e.target);
+                        
+                        settings.menuSelected.call(this, $invokedOn, $selectedMenu);
+                });
+                
+                return false;
+            });
+
+            //make sure menu closes on any click
+            $(document).click(function () {
+                $(settings.menuSelector).hide();
+            });
+        });
+
+        function getLeftLocation(e) {
+            var mouseWidth = e.pageX;
+            var pageWidth = $(window).width();
+            var menuWidth = $(settings.menuSelector).width();
+            
+            // opening menu would pass the side of the page
+            if (mouseWidth + menuWidth > pageWidth &&
+                menuWidth < mouseWidth) {
+                return mouseWidth - menuWidth;
+            } 
+            return mouseWidth;
+        }        
+        
+        function getTopLocation(e) {
+            var mouseHeight = e.pageY;
+            var pageHeight = $(window).height();
+            var menuHeight = $(settings.menuSelector).height();
+
+            // opening menu would pass the bottom of the page
+            if (mouseHeight + menuHeight > pageHeight &&
+                menuHeight < mouseHeight) {
+                return mouseHeight - menuHeight;
+            } 
+            return mouseHeight;
+        }
+
+    };
+})(jQuery, window);
+
+$("#myTable td").contextMenu({
+    menuSelector: "#contextMenu",
+    menuSelected: function (invokedOn, selectedMenu) {
+        var msg = "You selected the menu item '" + selectedMenu.text() +
+            "' on the value '" + invokedOn.text() + "'";
+        alert(msg);
+    }
+});
+</script>
+</body>
+</html>
