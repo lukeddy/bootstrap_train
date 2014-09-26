@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h2>Jqueryl练习</h2>
+<input type="button" name="" id="callRemoteData" value="调用远程数据"/>
+<div id="resultBox" style="width:200px;height:200px;border:1px solid tomato;background:rgba(213,21,34,0.5);">
+    
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="jquery/jquery-1.11.0.min.js"></script>-->
+<!--USE CDN-->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        callRemoteData();
+    });
+
+
+    function callRemoteData(){
+        $('#callRemoteData').click(function(){
+            console.log("getting remote data");
+            $.getJSON("http://api.map.baidu.com/telematics/v3/weather?location=%E5%8C%97%E4%BA%AC&output=json&ak=5slgyqGDENN7Sy7pw29IUvrZ&callback=?",
+              function(data) {
+                  console.log(data);
+                  $('#resultBox').html(data.results[0].index[0].des);
+             });
+        });
+    }
+
+    function jsonpCallbackFunc(){
+        alert("aaa");
+    }
+</script>
+</body>
+</html>
