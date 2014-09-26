@@ -66,7 +66,7 @@
         .bs-example-tooltips {
             text-align: center;
         }
-        span[data-help="true"]:after{
+        span[data-help="true"]:after,label[data-help="true"]:after{
             content: "!";
             font-size: 16px;
             line-height: 22px;
@@ -100,6 +100,12 @@
               data-placement="bottom" 
               data-html="true"
               title="<ul><li>我是内容1</li><li>我是内容2</li><li>我是内容3</li><li>我是内容4</li></ul>我是其他内容<img src='../images/flower.jpg' style='width:100%;'/>"></span>
+            <label href="#" 
+              data-help="true" 
+              data-toggle="tooltip" 
+              data-placement="bottom" 
+              data-html="true"
+              title="<ul><li>我是内容1</li><li>我是内容2</li><li>我是内容3</li><li>我是内容4</li></ul>我是其他内容<img src='../images/flower.jpg' style='width:100%;'/><a href='http://www.baidu.com' target='_blank'>http://www.baidu.com</a>"></label>
         </div>
     </div>
     
@@ -133,7 +139,7 @@
                         data-toggle="popover"
                         data-placement="right" 
                         data-html="true"
-                        data-content="<small style='color:red;'>Vivamus</small> sagittis lacus vel augue laoreet rutrum faucibus.<img src='../images/flower.jpg' style='width:100%;'/>"
+                        data-content="<small style='color:red;'>Vivamus</small> sagittis lacus vel augue laoreet rutrum faucibus.<img src='../images/flower.jpg' style='width:100%;'/><a href='http://www.baidu.com' target='_blank'>http://www.baidu.com</a>"
                         data-original-title="" 
                         title="">
                     html弹框
@@ -196,6 +202,13 @@
                   return $('#popoverExampleTwoHiddenTitle').html();
                 }
             });
+         
+            //使tooltip中的链接可点击
+            $('label').bind('mouseover', function () {
+                $(this).tooltip({placement: 'right',trigger: 'manual'}).tooltip('show');
+            });
+            $('label').on('click',function(){$(this).tooltip('destroy');});
+
 
         });
 
