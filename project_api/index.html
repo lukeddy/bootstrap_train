@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>页面标题-首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container wrapper">
+    <div class="row" id="navgation"></div>
+    <div class="row" id="content">
+        <h2>首页</h2>
+        <div class="row">
+            <style>
+
+            </style>
+            <ol class="exp-conent-orderlist">
+                <li class="exp-content-list list-item-1">
+                    <div class="content-list-text">
+                        我们必须明确一个大方向，也就是说现在面向对象的编程范畴。尽管人工智能曾经有所浪潮（看看Borland为什么有Turbo Prolog），但未来5-10年工业界广泛承认并接受的将是面向对象式的编程。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-2">
+                    <div class="content-list-text">
+                        工业界目前最流行的面向对象编程语言就是C++和Java。所以基本上锁定这两个方向就可以了。而且完全可以同时掌握。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-3">
+                    <div class="content-list-text">
+                        掌握Java的精华特性而且一定要知道为什么。比如，Interface和multi-thread。用interface是更好的多继承的模型，而多线程则是设计到语言一级的重要特性。要完全理解interface是为什么，用多线程又有几种常用的编程模型。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-4">
+                    <div class="content-list-text">
+                        理解了语言的特性是为什么了之后，就可以试着上升到设计这个层次，毕竟学习语言是要用的。目前比较好的开发模式是采用自定向下的面向对象的设计，加上MVC的模式（你可以看一下我介绍的关于MVC的内容）。首先要找出最顶层的对象（这往往是最难的），然后一层一层往下递归，记住每次应符合7+/-2的原则，因为我们人的短记忆就是这样。一般有图形用户界面的 应从界面开始设计。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-5">
+                    <div class="content-list-text">
+                        有了基本设计模型后，可以学一些设计模式（Design Pattern)。这是目前证明很有效的。比如体系结构模式（Layering分层，Pipe/Filter管道或过滤器），设计模式（有很多，比如对象池Object Pool、缓冲池Cache等），编程模式（比如Copy-on-Write）。懂了这些模式之后，就会对 系统的整体结构有很好的把握，而学术上也有倾向一个系统完全可以由各种模式组合而成。前面提到的MT实际上就有好几种模式，掌握后就不用自己花很多时间去试了。另外一个 很重要的领域就是并行 和分布式计算领域，大概有20种左右。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-6">
+                    <div class="content-list-text">
+                        接下来就不能纸上谈兵了，最好的方法其实是实践。一般教科书上的例子并不能算是实践，只能算是让你掌握语言特性用的。而提倡做实际的Project也不是太好，因为你还没有熟练的能力去综合各种技术，这样只能是你自己越来越迷糊。我认为比较好的方法是找一些比较经典的例子，每个例子比较集中一种编程思想而设计的，比如在我的实践当中，我曾经学习过一个很经 典的例子就是用Java实现的HotDraw（源自SmallTalk），你可以用rolemodel或hotdraw在搜索引擎上找一下，我记不大清楚了。从HotDraw上我学到了什么是 Framework，以及如何用rolemodel的方式来构造，这样我就可以应用到其他的地方。顺便 说一句，这个例子你绝对不会觉得小，只会觉得大，并且他还是真正的商用的Framework 。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-7">
+                    <div class="content-list-text">
+                        结合前面学到的设计模式你就可以很好的理解这些经典的例子。并且自己可以用他来实现一些简单的系统。如果可以对他进行进一步的修改，找出你觉得可以提高性能的地方，加上自己的设计，那就更上一个层次了，也就会真正地感到有所收获。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-8">
+                    <div class="content-list-text">
+                        好象以上谈的跟Java没什么关系，其实我们早就应该从单纯的学习语言到真正的学习好编程的领域。学习技术是没有止境的，你学习第一种语言可能要半年时间，以后每种语言都不应该超过两个月，否则你会觉得学习语言是包袱，是痛苦。
+                    </div>
+                </li>
+                <li class="exp-content-list list-item-9">
+                    <div class="content-list-text">
+                        学习是为了用的，是为了让你的程序产生价值，把握住这个原则会比较轻松点。<br><p>你现在只是学到了Java的骨架，却还没有学到Java的精髓。接下来你得研究设计模式了。设计模式是高级程序员真正掌握面向对象核心思想的必修课。设计模式并不是一种具体"技术", 它讲述的是思想，它不仅仅展示了接口或抽象类在实际案例中的灵活应用和智慧，让你 能够真正掌握接口或抽象类的应用，从而在原来的Java语言基础上跃进一步，更重要的是，设计模式反复向你强调一个宗旨：要让你的程序尽可能的可重用。</p>
+                    </div>
+                    <div class="last-item"><span class="last-item-end">END</span></div></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<a href="#" class="back-to-top">^<br/>返<br/>回<br/>顶<br/>部</a>
+</body>
+</html>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>

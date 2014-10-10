@@ -1,0 +1,32 @@
+.wrapper{
+    width:1024px;
+    position: relative;
+}
+
+#navgation{
+    width:275px;
+    position:absolute;
+    left:10px;
+}
+
+#content{
+    margin-left:275px;
+    position:relative;
+}
+
+.back-to-top{
+    width: 40px;
+    height: 135px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    color: #2a6496;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 13px;
+}
