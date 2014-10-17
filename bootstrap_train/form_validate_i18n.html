@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!--Parsley-->
+    <link rel="stylesheet" href="jquery/parsley/parsley.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="page-header text-center">Header</h1>
+<div class="container">
+
+    <ul class="list-group">
+        <li class="list-group-item"><a class="link list-group-item-text" href="http://parsleyjs.org/">http://parsleyjs.org/</a></li>
+        <li class="list-group-item">
+            <p class="list-group-item-heading">按钮区</p>
+            <a class="btn btn-success" href="javascript:void(0)" id="btnShowDialog">Show Validate Form</a>
+        </li>
+    </ul>
+
+    <div class="modal fade" id="dialogDataForm">
+        <div class="modal-dialog">
+            <form role="form" id="dataForm" name="dataForm" method="post" action="/test">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">
+                           使用parsleyjs进行表单验证
+                        </h2>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="form-group">
+                            <label for="type">Platform Type:</label>
+                            <select class="form-control" name="type" id="type" required>
+                                <option value="">= Select Platform =</option>
+                                <option value="1">Android</option>
+                                <option value="2">IOS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
+                            M: <input type="radio" name="gender" id="genderM" value="M" required/>
+                            F: <input type="radio" name="gender" id="genderF" value="F" />
+                        </div>
+                        <div class="form-group">
+                            <label for="hobbies">Hobbies (2 minimum):</label>
+                            <p>
+                                Skiing <input type="checkbox" name="hobbies" value="ski" data-parsley-mincheck="2"/>
+                                Running <input type="checkbox" name="hobbies" value="run" />
+                                Eating <input type="checkbox" name="hobbies" value="eat" />
+                                Sleeping <input type="checkbox" name="hobbies" value="sleep" />
+                                Reading <input type="checkbox" name="hobbies" value="read" />
+                                Coding <input type="checkbox" name="hobbies" value="code" />
+                            <p>
+                        </div>
+                        <div class="form-group">
+                            <label for="appname">Name:</label>
+                            <input type="text" class="form-control" name="appname" id="appname" placeholder="APP name"  required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email:</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="example@xx.com"
+                                   required
+                                   data-parsley-type="email"
+                                   />
+                        </div>
+                        <div class="form-group">
+                            <label for="number">number:</label>
+                            <input type="text" class="form-control" name="number" id="number" placeholder="123"
+                                   required
+                                   data-parsley-type="number"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label for="digits">digits:</label>
+                            <input type="text" class="form-control" name="digits" id="digits"
+                                   required
+                                   data-parsley-type="digits"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label for="alphanum">alphanum:</label>
+                            <input type="text" class="form-control" name="alphanum" id="alphanum"
+                                   required
+                                   data-parsley-type="alphanum"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label for="url">URL:</label>
+                            <input type="text" class="form-control" name="url" id="url"
+                                   placeholder="http://example.com"
+                                   required
+                                   data-parsley-type="url"
+                                    />
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea rows="6" class="form-control" name="description" id="description"
+                                      required
+                                      data-parsley-minlength="20"
+                                      data-parsley-maxlength="100"
+                                      data-parsley-validation-threshold="10"
+                                    ></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <fieldset id="btnField">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Create</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script  type="text/javascript" src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script  type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery/parsley/i18n/message.cn.js"></script>
+<script type="text/javascript" src="jquery/parsley/parsley.min.js"></script>
+</body>
+</html>
+<script>
+    window.ParsleyValidator.setLocale('cn');
+    $(function(){
+        $('#dialogDataForm').modal('show');
+        $('#dataForm').parsley();
+        $('#dialogDataForm').on('hidden.bs.modal', function (e) {
+            $('#dataForm').parsley().reset();
+        });
+
+        $('#btnShowDialog').on('click',function(){
+            $('#dialogDataForm').modal('show');
+        });
+    });
+
+
+</script>
