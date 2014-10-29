@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+<title>Template</title>
+<style>
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+html, body{
+background:#000;
+font-size:14px;
+color:#333;
+padding:0;
+margin:0;
+}
+.full-width{
+  width:100%;
+}
+.part{
+  position: relative;
+}
+.top-box{
+    width:100%;
+    height:100px;
+    position:fixed;
+    top:0;
+    background:green;
+}
+.footer-box{
+    width:100%;
+    height:60px;
+    position: fixed;
+    bottom:0;
+    background:blue;
+}
+.input-mail{
+  font-size: 16px;
+  vertical-align: middle;
+  width: 250px;
+  height: 40px;
+  padding: 0px 5px;
+  border: 0px;
+  border-radius: 0px;
+}
+.input-btn{
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  background: url(./img/btn.png) center center;
+  background-size: 100% 100%;
+}
+.input-btn:active{
+  background: url(./img/btn_active.png) center center;
+  background-size: 100% 100%;
+}
+
+.info-box{
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+  text-align: center;
+  background:tomato;
+}
+.line-input{
+}
+.line-text{
+  font-size: 13px;
+  color:#eee;
+  line-height: 35px;
+}
+
+</style>
+</head>
+<body>
+<div class="part">
+  <img class="full-width" src="img/1.jpg" />
+  <div class="info-box">
+    <div class="line-input">
+      <input id="emailTop" placeHolder="Email" type="text" class="input-mail" /><a data-inputid="emailTop" class="input-btn"></a>
+    </div>
+    <div class="line-text">
+      Enter email to request iOS download invitation
+    </div>
+  </div>
+</div>
+<div class="part">
+    <img class="full-width" src="img/2.jpg" />
+    <div class="info-box">
+        <p>I am text....</p>
+        <ul>
+            <li>aaaaaaaaaaaaaaaaaaaaaaa</li>
+            <li>bbbbbbbbbbbbbbbbbbbbbbb</li>
+            <li>ccccccccccccccccccccccccc</li>
+        </ul>
+    </div>
+</div>
+<div class="footer-box">
+    注意：position:absolute,position:fixed有层次关系，就是说：放在后边的层叠在最上边
+    固定在底部用于放其他信息
+</div>
+<script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+</body>
+</html> 
