@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Template</title>
+    <style>
+        body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+        html, body{
+            background:#000;
+            font-size:14px;
+            color:#333;
+            padding:0;
+            margin:0;
+        }
+        .full-width{
+            width:100%;
+        }
+        .part{
+            max-width:1000px;
+            margin:auto;
+            position: relative;
+        }
+        .footer-box{
+            max-width:1000px;
+            margin:auto;
+            height:auto;
+            position: fixed;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            /*background:url(img/footer_bg.png) no-repeat top left;*/
+            /*background-size:100% 100%;*/
+        }
+        .full-width-bottom{
+            max-width:1000px;
+            margin:auto;
+            height:auto;
+            position: fixed;
+            left:0px;
+            right:0px;
+            bottom:0px;
+            /*background:url(img/footer_bg.png) no-repeat top left;*/
+            /*background-size:100% 100%;*/
+        }
+
+
+        .info-box{
+            position: absolute;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            /*background:tomato;*/
+        }
+        #videoBox{
+            display: inline-block;
+            /*margin-top:100px;*/
+            width:80%;
+            /*height:180px;*/
+            height:30%;
+            margin:auto;
+            padding: 6px;
+            background: white;
+            border-radius: 6px;
+        }
+        #videoBox iframe{
+            border-radius: 6px;
+        }
+        #share-link{
+            display: block;
+            width: 20%;
+            height: 20%;
+             position: absolute;
+            right: 16%;
+            bottom: 50%;
+        }
+        #share-link img{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="part">
+    <img class="full-width" src="img/1.png" />
+    <div class="info-box">
+        <div id="videoBox">
+            <iframe width="100%" height="40%" src="//www.youtube.com/embed/xTzq22E6U2Y?modestbranding=1&amp;autohide=1&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="footer-box">
+        <a href="javascript:void(0)" id="share-link"><img src="img/share_btn.png"/></a>
+        <img class="full-width" src="img/footer_bg.png" />
+</div>
+
+</body>
+</html>
