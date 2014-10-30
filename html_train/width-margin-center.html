@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>使with,margin控制元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+
+.wrapper{
+	width:1000px;
+	margin:auto;
+	border:1px solid #ddd;
+	background-color:rgba(123,234,126,0.8);
+}
+
+#navBox{
+	height:50px;
+	width:706px;
+	margin:0 auto;
+	background-color:tomato;
+}
+
+ul{ 
+	margin:0 0 0 2px;
+
+	padding:0px;
+} 
+
+li{
+
+	list-style:none; 
+	float:left; 
+	margin-right:1px; 
+	padding:10px;
+	width:96px; 
+	background-color:#e0f0e0; 
+	text-align:center;
+} 
+</style> 
+</head> 
+<body> 
+<div class="wrapper">
+    <h3>width指定固定宽度,margin设置为auto控制元素居中</h3>
+	<div id="navBox"> 
+		<ul>
+			<li><a href="http://www.keleyi.com/menu/net/" target="_blank">.NET</a></li> 
+			<li><a href="http://www.keleyi.com/menu/javascript/" target="_blank">Javascript</a></li> 
+			<li><a href="http://www.keleyi.com/menu/jquery/" target="_blank">jQuery</a></li> 
+			<li><a href="http://www.keleyi.com/menu/csharp/" target="_blank">C#</a></li> 
+			<li><a href="http://www.keleyi.com/menu/other/" target="_blank">其他</a></li> 
+			<li><a href="http://www.keleyi.com/" target="_blank">首页</a></li>
+		</ul> 
+	</div> 
+	<p>内容。。。。</p>
+	<p>内容。。。。</p>
+	<p>内容。。。。</p>
+	<p>内容。。。。</p>
+	<p>内容。。。。</p>
+	<p>内容。。。。</p>
+</div>
+</body> 
+</html> 
