@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>使position:fixed控制元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+#navBox{
+	height:50px;
+	width:706px;
+	margin-left:auto;
+	margin-right:auto;
+    position:fixed;
+	left:0px;
+	right:0px;
+	top:100px;
+	background-color:tomato;
+}
+
+#footerBox{
+	height:50px;
+	width:706px;
+	margin-left:auto;
+	margin-right:auto;
+	position:fixed;
+	left:0px;
+	right:0px;
+	bottom:100px;
+	background-color:rgba(0,0,255,0.9);
+}
+
+ul{ 
+	margin:0 0 0 2px;
+
+	padding:0px;
+} 
+
+li{
+
+	list-style:none; 
+	float:left; 
+	margin-right:1px; 
+	padding:10px;
+	width:96px; 
+	background-color:#e0f0e0; 
+	text-align:center;
+} 
+</style> 
+</head> 
+<body> 
+<h3>position:fixed的DIV的居中效果,改变页面的宽度看看。 </h3>
+<div id="navBox"> 
+	<ul>
+		<li><a href="http://www.keleyi.com/menu/net/" target="_blank">.NET</a></li> 
+		<li><a href="http://www.keleyi.com/menu/javascript/" target="_blank">Javascript</a></li> 
+		<li><a href="http://www.keleyi.com/menu/jquery/" target="_blank">jQuery</a></li> 
+		<li><a href="http://www.keleyi.com/menu/csharp/" target="_blank">C#</a></li> 
+		<li><a href="http://www.keleyi.com/menu/other/" target="_blank">其他</a></li> 
+		<li><a href="http://www.keleyi.com/" target="_blank">首页</a></li>
+	</ul> 
+</div> 
+<div id="footerBox"> 
+	<ul>
+		<li><a href="http://www.keleyi.com/menu/net/" target="_blank">.NET</a></li> 
+		<li><a href="http://www.keleyi.com/menu/javascript/" target="_blank">Javascript</a></li> 
+		<li><a href="http://www.keleyi.com/menu/jquery/" target="_blank">jQuery</a></li> 
+		<li><a href="http://www.keleyi.com/menu/csharp/" target="_blank">C#</a></li> 
+		<li><a href="http://www.keleyi.com/menu/other/" target="_blank">其他</a></li> 
+		<li><a href="http://www.keleyi.com/" target="_blank">首页</a></li>
+	</ul> 
+</div> 
+</body> 
+</html> 
