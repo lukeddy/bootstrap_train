@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>控制position:absolute元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+
+.wrapper{
+	width:1000px;
+    height: 1000px;
+	margin:auto;
+	border:1px solid #ddd;
+	background-color:rgba(123,234,126,0.8);
+	position:relative;
+}
+/*水品垂直居中样式*/
+#box1{
+    width:300px;
+    height:300px;
+    background:tomato;
+    border:1px solid #ddd;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.wrapper2{
+    width:900px;
+    height: 260px;
+    margin:auto;
+    background:#fff;
+    border:1px solid tomato;
+}
+.wrapper2 .subbox{
+    width:200px;
+    height:200px;
+    margin:10px;
+    border:6px dotted darkslategrey;
+    float:left;
+    position: relative;
+    text-align:center;
+}
+
+.wrapper2 .subbox .example1{
+    width:100px;
+    height:100px;
+    border:1px solid #999;
+    background:green;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.wrapper2 .subbox .example2{
+    width:80%;
+    height:70%;
+    border:1px solid #999;
+    background:green;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.wrapper2 .subbox .example3{
+    max-width:50%;
+    height:50%;
+    border:1px solid #999;
+    background:blue;
+    margin:auto;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+</style> 
+</head> 
+<body> 
+<div class="wrapper">
+    <h3>绝对定位position:absolute水平垂直居中，参考: <a href="http://blog.csdn.net/freshlover/article/details/11579669">http://blog.csdn.net/freshlover/article/details/11579669</a> </h3>
+    <div id="box1">
+        <p>我是内容</p>
+        <pre>
+            width:300px;
+            height:200px;
+            background:tomato;
+            border:1px solid #ddd;
+            margin:auto;
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+        </pre>
+    </div>
+
+    <div class="wrapper2">
+        <div class="subbox">
+            <div class="example1">
+                example1 content
+            </div>
+        </div>
+        <div class="subbox">
+            <div class="example2">
+                example2 content
+            </div>
+        </div>
+        <div class="subbox">
+            <div class="example3">
+                example3 content
+            </div>
+        </div>
+    </div>
+</div>
+</body> 
+</html> 

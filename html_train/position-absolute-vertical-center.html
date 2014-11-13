@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>控制position:absolute元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+
+.wrapper{
+	width:1000px;
+    height: 1000px;
+	margin:auto;
+	border:1px solid #ddd;
+	background-color:rgba(123,234,126,0.8);
+	position:relative;
+}
+/*垂直居中样式*/
+#box1{
+    width:300px;
+    height:200px;
+    background:tomato;
+    border:1px solid #ddd;
+    margin:auto;
+    position:absolute;
+    top:0;
+    bottom:0;
+}
+
+#box2{
+    width:20%;
+    height:20%;
+    background: purple;;
+    border:1px solid #ddd;
+    margin:auto;
+    position:absolute;
+    left:350px;
+    top:0;
+    bottom:0;
+}
+
+#box3{
+    max-width:40%;
+    max-height:40%;
+    background:darkgreen;
+    border:1px solid #ddd;
+    margin:auto;
+    position:absolute;
+    right:20px;
+    top:0;
+    bottom:0;
+}
+
+</style> 
+</head> 
+<body> 
+<div class="wrapper">
+    <h3>绝对定位position:absolute垂直居中，参考: <a href="http://blog.csdn.net/freshlover/article/details/11579669">http://blog.csdn.net/freshlover/article/details/11579669</a> </h3>
+
+    <div id="box1">
+        <p>我是内容</p>
+        <pre>
+        width:300px;
+        height:200px;
+        background:tomato;
+        border:1px solid #ddd;
+        margin:auto;
+        position:absolute;
+        top:0;
+        bottom:0;
+        </pre>
+    </div>
+    <div id="box2">
+        <p>我是内容</p>
+        <pre>
+        width:20%;
+        height:20%;
+        background:tomato;
+        border:1px solid #ddd;
+        margin:auto;
+        position:absolute;
+        left:350px;
+        top:0;
+        bottom:0;
+        </pre>
+    </div>
+    <div id="box3">
+        <p>我是内容-我是内容-我是内容-我是内容-我是内容-我是内容-我是内容-我是内容-我是内容-我是内容-</p>
+        <pre>
+        max-width:30%;
+        max-height:20%;
+        background:darkgreen;
+        border:1px solid #ddd;
+        margin:auto;
+        position:absolute;
+        right:1px;
+        top:0;
+        bottom:0;
+        </pre>
+    </div>
+</div>
+</body> 
+</html> 
