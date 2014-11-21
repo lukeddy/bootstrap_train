@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="responsivenav/styles/responsive-nav.css">
+    <link rel="stylesheet" href="responsivenav/styles.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1><a href="http://www.bootcss.com/p/responsive-nav.js/">响应式导航</a></h1>
+<div class="wrapper">
+    <h3>练习 3</h3>
+    <div>
+        <nav class="nav-3 nav-collapse">
+            <ul>
+                <li><a href="http://google.com">Home</a></li>
+                <li><a href="http://google.com">About</a></li>
+                <li><a href="http://google.com">Projects</a></li>
+                <li><a href="http://google.com">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--<script src="jquery/jquery-1.11.0.min.js"></script>-->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
+</body>
+</html>
+<script src="responsivenav/responsive-nav.min.js"></script>
+<script>
+    //练习3
+    var navigation = responsiveNav(".nav-3", {
+        animate: true,                    // Boolean: Use CSS3 transitions, true or false
+        transition: 284,                  // Integer: Speed of the transition, in milliseconds
+        label: "Menu",                    // String: Label for the navigation toggle
+        insert: "after",                  // String: Insert the toggle before or after the navigation
+        customToggle: "",                 // Selector: Specify the ID of a custom toggle
+        closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked
+        openPos: "relative",              // String: Position of the opened nav, relative or static
+        navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
+        navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
+        jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+        init: function(){},               // Function: Init callback
+        open: function(){},               // Function: Open callback
+        close: function(){}               // Function: Close callback
+    });
+</script>
