@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="dns-prefetch" href="">
+<link rel="dns-prefetch" href="">
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<style>
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#888888;
+}
+img{
+    vertical-align: middle;
+    border:0;
+}
+.wrp_page{
+    width:600px;
+    margin:auto;
+}
+.clearfix:before, .clearfix:after {
+display: table;
+content: " ";
+}
+.photobox{
+    width: 328px;
+    background: #fff;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.photobox .userinfo{
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.photobox .userinfo .profimg {
+    float: left;
+    border-radius: 20px;
+    display: block;
+    border: 1px solid #EAEAEA;
+}
+.photobox .userinfo .infobox {
+    margin-left: 48px;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.photobox .userinfo .infobox .filter, .photobox .userinfo .infobox .time {
+    font-size: 11px;
+    float: right;
+    color: #777;
+}
+.photobox .userinfo .infobox .username {
+    display: block;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mainimg_wrapper {
+position: relative;
+}
+.photobox .mainimg {
+display: block;
+width: 306px;
+height: 306px;
+margin-bottom: 5px;
+position: relative;
+}
+.photobox .like_stats {
+color: #444;
+padding-bottom: 5px;
+font-size: 12px;
+padding-right: 10px;
+}
+.photobox .like_stats ul {
+margin: 0;
+padding: 0;
+}
+.photobox .like_stats ul.list-inline{
+ list-style:none;
+}
+.photobox .like_stats .list-inline li{
+    float: left;
+    display: inline-block;
+    height: 16px;
+    margin-right:10px;
+}
+
+.photobox .like_stats .fa {
+color: #777;
+font-size: 11px;
+}
+/*.fa-heart:before {
+content: "\f004";
+}
+.fa-comment:before {
+content: "\f075";
+}*/
+.btn-more{
+    display: inline-block;
+    width: 55px;
+    height: 17px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 17px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>                     
+<div class="wrp_page">
+    <div id="page-content" class="page-content" lang="en">
+        <div id="img-content">
+            <!--编辑时用的显示模版代码
+            <div class="photobox">
+                <div class="userinfo clearfix">
+                   <a href="javascript:void(0)" class="profimg"><img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xap1/t51.2885-19/10175128_338089019688937_1919932431_a.jpg" alt="" width="40" height="40"></a>
+                    <div class="infobox">
+                        <div class="firstinfo">
+                        <span class="time">3min</span>
+                        <a href="javascript:void(0);" class="username">imjustinobrien</a>
+                        </div>
+                        <div class="secondinfo">
+                        <span class="filter">Normal</span>
+                        <span class="fullname">Justin OBrien</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainimg_wrapper">
+                    <a href="javascript:void(0)" class="mainimg">
+                      <img src="http://scontent-b.cdninstagram.com/hphotos-xfa1/t51.2885-15/10890986_880524615301370_296969060_a.jpg" width="306" heigh="306">
+                    </a>
+                </div>
+                <div class="like_stats clearfix">
+                    <ul class="list-inline pull-left">
+                        <li><i class="fa fa-heart">Like</i> <span class="like_count_893837886419235497_5754987">0</span></li>
+                        <li><i class="fa fa-comment fa-flip-horizontal">Comment</i> <span class="comment_count_893837886419235497_5754987">0</span></li>
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            -->
+        </div>
+        <div style="text-align:center;" id="moreBtnBox">
+           <img style="display:none;" id="loadingImg" src="images/loading.gif">
+           <a class="btn-more" data-url="" id="btnMore" href="javascript:void(0)">More</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script> 
+<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script> 
+<script id="photobox-template" type="text/x-handlebars-template">
+   <div class="photobox">
+        <div class="userinfo clearfix">
+           <a href="javascript:void(0)" class="profimg"><img src="{{profilePicture}}" alt="" width="40" height="40"></a>
+            <div class="infobox">
+                <div class="firstinfo">
+                <span class="time">{{createdTime}}</span>
+                <a href="javascript:void(0);" class="username">{{username}}</a>
+                </div>
+                <div class="secondinfo">
+                <span class="filter">{{filter}}</span>
+                <span class="fullname">{{fullName}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="mainimg_wrapper">
+            <a href="javascript:void(0)" class="mainimg">
+              <img src="{{pubImageURL}}" width="306" heigh="306">
+            </a>
+        </div>
+        <div class="like_stats clearfix">
+            <ul class="list-inline pull-left">
+                <li><i class="fa fa-heart">Like</i> <span class="like_count_893837886419235497_5754987">{{likesCount}}</span></li>
+                <li><i class="fa fa-comment fa-flip-horizontal">Comment</i> <span class="comment_count_893837886419235497_5754987">{{commentsCount}}</span></li>
+           
+            </ul>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</script>
+
+<script>
+  //使用Instagram所需的Token,不同用户的token不一样，需要申请
+  var access_token="1593904129.1677ed0.72382406be574f2ea2ed5a1ab655407f";
+  //首次请求地址
+  var dataURL='https://api.instagram.com/v1/tags/test/media/recent?access_token='+access_token+'&callback=?';
+  
+  //主函数入口
+  $(function(){
+     getInstagramTagImages(dataURL);
+  });
+
+   /**
+   *JSONP调用，使用Instagram API取得指定tag下的图片
+   *参数callURL: tag API地址
+   **/
+   function getInstagramTagImages(callURL){
+    $.ajax({
+        method: "GET",
+        url: callURL,
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "jsonpcallback",
+        beforeSend:function(){
+            $('#loadingImg').show();
+            $('#btnMore').hide();
+        },
+        success: function(data) {
+            //console.log(data);
+            $('#loadingImg').hide();
+            parseInstagramData(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           //alert("Check you internet Connection");
+        }
+    });
+   }
+
+  /**
+  *解析Instagram响应数据
+  *参数d: 服务器返回的JSON格式数据对象
+  **/
+  function parseInstagramData(d){
+    if(d&&d.data.length>0){
+        //解析图片
+        $.each(d.data,function(index,item){
+          // console.log(item);
+          //console.log(item.tags);
+          //console.log(item.images);
+          if(item.type=="image"){
+            //alert("aaa");
+            if(item.images){
+                //alert("bbb");
+                //var caption=item.caption.text;
+                //console.log(caption);
+                //var imgURL=item.images.standard_resolution.url;
+
+                //var html='<p><img src="'+imgURL+'" /></p>';
+                //$('#img-content').append(html);
+                parseTemplate(item);
+
+            }
+          }
+        });
+   
+
+        //是否显示下一页按钮
+        if(d.pagination.next_url){
+           $('#btnMore').attr('data-url',d.pagination.next_url).show().click(function(){
+              getInstagramTagImages($(this).attr('data-url'));
+           });
+           $('#btnMore').show();
+        }else{
+           $('#moreBtnBox').empty().html('<p style="text-align:center;color:red;">No more image</p>');
+        }
+    }else{
+        $('#moreBtnBox').empty().html('<p style="text-align:center;color:red;">Oops,no image</p>');
+    }
+  }
+
+
+ /**
+ *使用模版技术渲染页面
+ **/
+  function parseTemplate(item){
+     var source   = $("#photobox-template").html();
+     var template = Handlebars.compile(source);
+     var context = {
+        profilePicture:item.user.profile_picture, 
+        createdTime: item.created_time,
+        username:item.user.username,
+        pubImageURL:item.images.low_resolution.url,
+        filter:item.filter,
+        fullName:item.user.full_name,
+        likesCount:item.likes.count,
+        commentsCount:item.comments.count
+    };
+    var html= template(context);
+    $('#img-content').append(html);
+  }
+   
+</script>
+
