@@ -107,6 +107,7 @@ body{
                 var imgURL=item.images.standard_resolution.url;
                 var html='<p class="img-item"><img src="images/default.jpg"  data-src="'+imgURL+'"  /></p>';
                 $('#img-content').append(html);
+                //Lazy load images
                 $("img").unveil();
             }
           }
