@@ -63,6 +63,7 @@ body{
 </html>
 <!--There is an error when use this lib,so i changed to jquery <script type="text/javascript" src="js/zepto.min.js"></script>  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--Lazy load image lib-->
 <script type="text/javascript" src="js/jquery.unveil.js"></script>
 <script>
   //Instagram access token
@@ -105,7 +106,8 @@ body{
             if(item.images){
                 //var caption=item.caption.text;
                 var imgURL=item.images.standard_resolution.url;
-                var html='<p class="img-item"><img src="images/default.jpg"  data-src="'+imgURL+'"  /></p>';
+                //var html='<p class="img-item"><img src="images/default.jpg"  data-src="'+imgURL+'"  /></p>';
+                var html='<p class="img-item"><img src="images/loading.gif"  data-src="'+imgURL+'"  /></p>';
                 $('#img-content').append(html);
                 //Lazy load images
                 $("img").unveil();
