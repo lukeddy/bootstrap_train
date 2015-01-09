@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="dns-prefetch" href="">
+<link rel="dns-prefetch" href="">
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<style>
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color:#aaa;
+}
+.wrapper{
+    width:600px;
+    margin:auto;
+}
+.img-item{
+    margin:20px 0;
+    border:3px dotted tomato;
+}
+.img-item img{
+    width:100%;
+    height:auto;
+}
+.btn-more{
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 36px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>                     
+<div class="wrapper">
+        <div id="img-content">
+                <!--
+                <p><img src="http://scontent-a.cdninstagram.com/hphotos-xaf1/t51.2885-15/10919133_1521456648107819_1718797467_n.jpg" /></p>
+                -->
+        </div>
+        <div style="text-align:center;" id="moreBtnBox">
+           <img style="display:none;" id="loadingImg" src="images/loading.gif">
+           <a class="btn-more" data-url="" id="btnMore" href="javascript:void(0)">I Want More...</a>
+        </div>
+</div>
+</body>
+</html>
+<!--There is an error when use this lib,so i changed to jquery <script type="text/javascript" src="js/zepto.min.js"></script>  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.unveil.js"></script>
+<script>
+  //Instagram access token
+  var access_token="1593904129.1677ed0.72382406be574f2ea2ed5a1ab655407f";
+  //Tag API URL
+  var dataURL='https://api.instagram.com/v1/tags/test/media/recent?access_token='+access_token+'&callback=?';
+
+  
+  $(function(){
+     getInstagramTagImages(dataURL);
+  });
+
+
+   function getInstagramTagImages(callURL){
+    $.ajax({
+        method: "GET",
+        url: callURL,
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "jsonpcallback",
+        beforeSend:function(){
+            $('#loadingImg').show();
+            $('#btnMore').hide();
+        },
+        success: function(data) {
+            $('#loadingImg').hide();
+            parseInstagramData(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           //alert("Check you internet Connection");
+        }
+    });
+   }
+
+  function parseInstagramData(d){
+    if(d&&d.data.length>0){
+        //解析图片
+        $.each(d.data,function(index,item){
+          if(item.type=="image"){
+            if(item.images){
+                //var caption=item.caption.text;
+                var imgURL=item.images.standard_resolution.url;
+                var html='<p class="img-item"><img src="images/default.jpg"  data-src="'+imgURL+'"  /></p>';
+                $('#img-content').append(html);
+                $("img").unveil();
+            }
+          }
+        });
+   
+
+        //wether show load more button
+        if(d.pagination.next_url){
+           $('#btnMore').attr('data-url',d.pagination.next_url).show().click(function(){
+              getInstagramTagImages($(this).attr('data-url'));
+           });
+           $('#btnMore').show();
+        }else{
+           $('#moreBtnBox').empty().html('No more data!');
+        }
+    }else{
+        $('#moreBtnBox').empty().html('No data!');
+    }
+  }
+   
+</script>
+
+
