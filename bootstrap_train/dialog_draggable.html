@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .bs-docs-example {
+            position: relative;
+            margin: 15px 0;
+            padding: 39px 19px 14px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+<h1 class="page-header text-center">对话框</h1>
+
+<div class="container">
+    <div classs="row">
+        <a href="javascript:void(0);" class="btn btn-default" id="btnShowDialog">JS调用对话框</a>
+        <!-- 触发显示对话框的按钮 -->
+        <a href="#myModal" role="button" class="btn btn-info" data-toggle="modal">ID调用对话框</a>
+        <div class="bs-example-modal">
+            <!-- 对话框 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div classs="row">
+        <!-- 触发显示对话框的按钮 -->
+        <a href="#myModal2" role="button" class="btn btn-warning" data-toggle="modal">ID调用对话框</a>
+        <div class="bs-example-modal">
+            <!-- 对话框 -->
+            <div class="modal fade" id="myModal2">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">弹出框2</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+    <div classs="row">
+    <h1>点击层不关闭使用data-backdrop="static"属性</h1>
+        <!-- 触发显示对话框的按钮 -->
+        <a href="#myModal3" role="button" class="btn btn-warning" data-toggle="modal" data-backdrop="static">ID调用对话框</a>
+        <div class="bs-example-modal">
+            <!-- 对话框 -->
+            <div class="modal fade" id="myModal3">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">弹出框2</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>One fine body&hellip;</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary">保存</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#btnShowDialog").click(function () {
+            $("#myModal").modal("show");
+        });
+        //bootstrap本身不带可拖动插件功能，需要加入其他插件，如：draggable插件才能正常拖动
+        $(".modal-dialog").draggable({
+            handler:".modal-header"
+        });
+        $(".modal-header").attr("style","cursor:move;");
+    });
+</script>
+</body>
+</html>
