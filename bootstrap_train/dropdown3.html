@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+       .dropdown-menu>li
+{	position:relative;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+	cursor:pointer;
+}
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    display:none;
+    margin-top: -1px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	border-left-color:#fff;
+	box-shadow:none;
+}
+.right-caret:after,.left-caret:after
+ {	content:"";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent;
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+	margin-left:5px;
+}
+.right-caret:after
+{	border-left: 5px solid #ffaf46;
+}
+.left-caret:after
+{	border-right: 5px solid #ffaf46;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+	<h2>多级下拉列表</h2>
+	<div class="dropdown" style="position:relative">
+	<a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click Here <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li>
+			<a class="trigger right-caret">Level 1</a>
+			<ul class="dropdown-menu sub-menu">
+				<li><a href="#">Level 2</a></li>
+				<li>
+					<a class="trigger right-caret">Level 2</a>
+					<ul class="dropdown-menu sub-menu">
+						<li><a href="#">Level 3</a></li>
+						<li><a href="#">Level 3</a></li>
+						<li>
+							<a class="trigger right-caret">Level 3</a>
+							<ul class="dropdown-menu sub-menu">
+								<li><a href="#">Level 4</a></li>
+								<li><a href="#">Level 4</a></li>
+								<li><a href="#">Level 4</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">Level 2</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Level 1</a></li>
+		<li><a href="#">Level 1</a></li>
+	</ul>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery-1.11.0.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(function(){
+	$(".dropdown-menu > li > a.trigger").on("click",function(e){
+		var current=$(this).next();
+		var grandparent=$(this).parent().parent();
+		if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
+			$(this).toggleClass('right-caret left-caret');
+		grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+		grandparent.find(".sub-menu:visible").not(current).hide();
+		current.toggle();
+		e.stopPropagation();
+	});
+	$(".dropdown-menu > li > a:not(.trigger)").on("click",function(){
+		var root=$(this).closest('.dropdown');
+		root.find('.left-caret').toggleClass('right-caret left-caret');
+		root.find('.sub-menu:visible').hide();
+	});
+});
+</script>
+</body>
+</html>
