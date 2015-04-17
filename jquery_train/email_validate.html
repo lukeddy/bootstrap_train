@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>使with,margin控制元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+
+.wrapper{
+	width:1000px;
+	margin:auto;
+	border:1px solid #ddd;
+	background-color:rgba(123,234,126,0.8);
+}
+
+.msgFail{
+	color:red;
+	font-size:12px;
+}
+</style> 
+</head> 
+<body> 
+<div class="wrapper" style="text-align:center;">
+    <h3>邮箱验证</h3>
+    <div>
+    	<input type="email" name="email" onpropertychange="listenInputEmail(this);" oninput="listenInputEmail(this);">
+    	<p id="respMsg"></p>
+    	<p style="margin-top: 63px;">
+            <a class="btn disabled" href="javascript:void(0);" style="display: inline-block;" id="btnApplyActiveCode">
+                确认
+            </a>
+        </p>
+    </div>
+
+    
+</div>
+</body> 
+</html> 
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+  $(function(){
+      $('#btnApplyActiveCode').click(function(){
+          alert("验证成功：可以提交表单");
+      });
+  });
+	  /**
+   * 验证邮件地址方法
+   * @param e
+   */
+  function listenInputEmail(e){
+      var emailRegex  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if(!emailRegex.exec($(e).val())){
+          $("#btnApplyActiveCode").addClass("disabled");
+          $("#respMsg").html("无效邮件地址").removeClass().addClass("msgFail");
+      }else{
+          $("#respMsg").html("");
+          $("#btnApplyActiveCode").removeClass("disabled");
+      }
+  }
+</script>
