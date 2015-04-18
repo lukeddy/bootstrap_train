@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<title>全屏分页</title>
+	<style type="text/css">
+       h1,html,body{
+       	 margin:0;
+       	 padding:0;
+       }
+       body{
+       	font-family: "Microsof YaHei";
+       }
+
+       h1{
+       	font-size: 6em;
+       	font-weight: normal;
+       }
+
+       p{
+        font-size:2em;
+        margin:0.5em 0 2em 0;
+       }
+       html,body{
+       	   height: 100%;
+       }
+       
+       #section01,#section02,#section03,#section04{
+         background-color:#fff;
+         background-size:cover;
+         background-position: 50% 50%;
+       }
+       #section01{
+       	 background-image: url(http://pic.desk.chinaz.com/file/201201/2/fengjingyoumeibz28.jpg);
+       }
+       #section02{
+       	 background-image: url(http://www.pp3.cn/uploads/20120314L/27.jpg);
+       }
+        #section03{
+        	background-image: url(http://pica.nipic.com/2007-11-05/2007115155924321_2.jpg);
+       }
+        #section04{
+       	 background-image: url(http://image.tianjimedia.com/uploadImages/2013/169/63SHZY6DTNT5.jpg);
+       }
+       #container,.section{
+         height:100%;
+       }
+       .floatleft{
+          float: left;
+       }
+       #container{
+          width:400%;
+       }
+       .section{
+          width: 25%;
+       }
+ 
+	</style>
+</head>
+<body>
+   <div id="container">
+   	   <div class="section floatleft" id="section01"></div>
+	     <div class="section floatleft" id="section02"></div>
+	     <div class="section floatleft" id="section03"></div>
+	     <div class="section floatleft" id="section04"></div>
+   </div>
+</body>
+</html>
+<script type="text/javascript">
+  (function($){
+    var defaults={
+      'container':'#container',
+      'sections':'.section',
+      'easing':'ease',
+      'duration':1000,
+      'pagination':true,
+      'loop':false,
+      'keyboard':'vertical',
+      'onpageSwitch':
+    }
+  })(jQuery);
+</script>
