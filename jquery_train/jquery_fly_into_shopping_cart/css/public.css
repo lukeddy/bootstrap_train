@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url("base.css");
+.baseBg{ background-image:url(../images/base_bg.png); background-repeat: no-repeat;}
+.deleteBg{ background-image:url(../images/deleteBg.jpg); background-repeat: no-repeat;}
+.discussBg{ background-image:url(../images/discussBg.gif); background-repeat: no-repeat;}
+.warp{ width:996px; margin:0px auto;}
+.middle{ margin-top:-2px;margin-top:0px\9; vertical-align:middle;}
+#D-bg{ position:absolute; z-index:998;  background:#000; opacity:0.2; filter:alpha(opacity=20); width:100%; height:100%;display:none; left:0px; top:0px;}
+#D-bg-a{position:absolute; z-index:998;  background:#fff; opacity:0.7; filter:alpha(opacity=70); width:100%; height:100%;display:none; left:0px; top:0px;}
+/* head */
+
+
+
+/* J-shoping */
+.J-shoping{ height:34px;position:fixed;right:45px; bottom:0px; z-index:900;}
+.J-shoping-item{ position:relative; padding:0px 6px; height:34px;}
+.J-shoping-pos{ position:absolute; width:6px; height:34px;z-index:920; top:-3px;}
+.J-L-ico{background-position:-55px -84px; left:0px;}
+.J-R-ico{background-position:-66px -84px; right:0px;}
+.J-shoping-main{position:relative;}
+.J-shoping-title{ height:27px; cursor:pointer;line-height:27px;padding:0px 10px 4px 10px; position:relative; z-index:920;background:url(../images/bg5.png) repeat-x 0px 0px;}
+.J-shoping-title .J-go{ color:#fff; display:block; float:left;}
+.J-shoping-title .J-go em{ display:inline-block; width:17px; height:14px; vertical-align:middle; margin:-2px 10px 0px 0px; margin-top:0px\9; background-position:-56px -124px;}
+.J-shoping-num{ width:14px; height:14px; background-position:-28px -88px; text-align:center; overflow:hidden; line-height:14px; display:block; position:absolute; left:70px; top:2px; color:#fff; font-size:10px;}
+.J-shoping-body{ width:255px;display:none;border:solid 1px #d6d6d6; box-shadow:0px 0px 5px #8b8b8b;behavior: url(js/pie.htc); padding:10px 10px 35px 10px; position:absolute; bottom:5px; left:0px;background:url(../images/p-bg.png) repeat; z-index:910;}
+.J-shoping-list{ padding:5px;color:#999; border:solid 1px #e3e3e3; background:#fff; height:50px; margin-bottom:10px; position:relative;}
+.J-shoping-list-remove{ background:#ffd2d3;}
+.J-shoping-list img{ float:left;}
+.J-shoping-list-a{ float:right; width:185px;}
+.J-shoping-list-a p{ height:25px;line-height:25px; }
+.J-shoping-list-a p em{ color:#0363BD; font-weight:bold; margin-right:3px;}
+.J-shoping-close{ position:absolute; cursor:pointer; right:5px; top:5px; width:11px; height:11px; background-position:-34px -147px;}
+.J-shoping-close:hover{background-position:-45px -147px;}
+.J-shoping-buy{ height:26px;}
+.J-shoping-buy span{ float:left; color:#555;}
+.J-shoping-buy a{ width:112px; height:26px; background-position:-3px -249px; display:block; float:right;}
+.J-shoping-buy a:hover{ background-position:-3px -277px; }
+.J-shoping-px{width:275px;border:solid 1px #d6d6d6; display:none; box-shadow:0px 0px 5px #8b8b8b;behavior: url(js/pie.htc); height:28px; position:absolute; bottom:5px; left:0px;background:url(../images/p-bg.png) repeat; z-index:905;}
+.J-shoping-mx{width:113px; position:absolute; left:-3px; top:-3px; height:3px; background-position:-4px -187px; z-index:921;}
+.J-shoping-small{ width:119px;}
+#floatOrder{ width:50px; height:50px;padding:2px; background:#fff; border:solid 5px #e54144; overflow:hidden; position:absolute; z-index:890;}
+.Q-online{ width:28px; height:20px; display:block; background-position:-78px -130px; position:fixed; right:10px; bottom:13px;}
+#U-attion{ display:block; width:120px; padding-right:20px; height:28px; background:#eee; line-height:28px; text-align: center; border:solid 1px #d0d0d0; color:#181818; position:absolute; left:-145px; top:-2px;}
+#U-attion em{ display:inline-block; vertical-align:middle; margin:-2px 5px 0px 0px; margin-top:0px\9; width:16px; height:15px; background-position:-65px -47px;}
+#U-attion span{display:inline-block; width:22px; height:11px; background-position:-65px -32px; position:absolute; right:5px; top:2px;}
+/* J-dialog */
+.J-dialog{ background:#fff; position: fixed; left:50%; top:50%; border:solid 8px #d4e6f2; z-index:999; padding:10px 20px; height:52px; width:200px;margin:-26px 0px 0px -100px;}
+#D-addGZ{ width:300px; height:80px; margin:-65px 0px 0px -150px;}
+#D-delete{ width:280px; height:90px; margin:-45px 0px 0px -140px;}
+.D-closeBtn{ display:block; width:14px; height:13px; position:absolute; right:20px; top:20px; background-position:-52px -92px; cursor:pointer; z-index:9999;}
+.J-dialog-main{position:relative;padding:10px 10px 10px 60px;}
+.J-dialog-main em{ display:block; width:32px; height:32px; position:absolute; left:0px; top:50%; margin-top:-16px;}
+.J-dialog-main em.success-ico{ background-position:-6px -83px;}
+.J-dialog-main em.failure-ico{background-position:-6px -117px;}
+.J-dialog-main h3{ font-size:14px; font-weight:bold; line-height:32px;}
+.J-dialog-main p{ color:#8a8a8a;}
+.J-dialog-main p a{ color:#3465cc;}
+.J-dialog-title{ height:30px; line-height:30px; font-size:14px; font-weight:bold;border-bottom:solid 1px #ddd; padding-bottom:5px; margin-bottom:10px;}
+.J-dialog-text{ line-height:50px; font-size:14px; font-weight:bold; text-align:center; padding-left:50px; position:relative;}
+.J-dialog-text em{ display:block;width:50px; height:50px; position:absolute; left:10px; top:20px; *top:0px;}
+.J-dialog-btn{ height:24px; text-align:center; padding-left:50px;}
+.J-dialog-btn span{ display:inline-block; line-height:22px; height:22px; padding:0px 20px; margin:0px 10px; cursor:pointer; border-radius:3px; position:relative;behavior: url(../js/pie.htc);}
+.J-sure-btn{ color:#fff; background:#0186c9; border:solid 1px #007cb8;}
+.J-cancel-btn{ background:#eee; color:#6e6a69; border:solid 1px #e7e7e7;}
+
+
+
+

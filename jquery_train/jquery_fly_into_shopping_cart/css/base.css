@@ -1,0 +1,116 @@
+@charset "utf-8";
+html,body, ol, ul,li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {margin: 0;padding: 0;outline:none;}
+html { font-size: 12px; line-height: 2em; font-family:Verdana,arial,宋体;overflow-x:hidden;}
+body {color: #333; background-color:#888888; position:relative; }
+img { border: 0px;vertical-align:middle; }
+ul, li { list-style: none; }
+p{word-wrap:break-word;}
+.left { float: left; }
+.right { float: right; }
+.block{ display:block;}
+.clear { clear: both; }
+em,i{ font-style:normal;}
+a { text-decoration: none; color: #347bc7; }
+a:hover { text-decoration: underline;}
+
+/* all font */
+h3{ font-size:14px;}
+.red{ color:#f00;}
+.orange{ color:#af2a36;}
+.font14{ font-size:14px;}
+.font20{ font-size:20px;}
+.pre{ position:relative;}
+.indent{ text-indent:2em;}
+.algin-right{ text-align:right;}
+.mar-b-5{ margin-bottom:5px;}
+/* all forms */
+*:focus { outline: none; }
+input, label {font-family:Verdana,arial,宋体; vertical-align: middle;font-size:12px;}
+textarea {font-family:Verdana,arial,宋体; resize: none; overflow-y: auto;font-size:12px;}
+select{font-size:12px;font-family:Verdana,arial,宋体; }
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}
+/* -webkit-scrollbar */
+::-webkit-scrollbar-track-piece {background-color:rgba(255, 255, 255, 1);-webkit-border-radius:3;}
+::-webkit-scrollbar {width:15px;height:8px;}
+::-webkit-scrollbar-thumb {height:30px;background-color:#7ab6e7;-webkit-border-radius:7px;outline:2px solid #fff;outline-offset:-2px;border: 2px solid #fff;}
+::-webkit-scrollbar-thumb:hover {height:30px;background-color:#54a2e3;-webkit-border-radius:8px;}
+
+/* top */
+#top{ background:#f3f3f3; height:24px; line-height:24px; position:relative; z-index:200; text-align:right; color:#737373; *padding-top:2px;}
+#top a{ padding:0px 5px; color:#737373;}
+#top em{ display:inline-block;}
+#top em.ico1{ width:23px; height:18px; background-position:-22px -4px; margin-right:5px;}
+#top .site{ position:relative; float:right;}
+#top .site-a{position:relative; z-index:3; top:3px; padding:0px 6px 0px 9px; line-height:18px;}
+#top .site-a em{ width:7px; height:4px; margin-left:5px;background-position:-22px -28px; -moz-transform-origin:50% 30%;-webkit-transform-origin:50% 30%;-o-transform-origin:50% 30%;transform-origin:50% 30%;-webkit-transition:-webkit-transform .2s ease-in;-moz-transition:-moz-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;}
+#top .site:hover .site-a{background:#fff;border: solid 1px #ccc; height:22px; *line-height:21px; top:1px;top:0px\9; border-bottom:none; padding:1px 5px 0px 8px; padding-top:2px\9;}
+#top .site:hover em{-moz-transform:rotate(180deg);-moz-transform-origin:50% 30%;-webkit-transform:rotate(180deg);-webkit-transform-origin:50% 30%;-o-transform:rotate(180deg);-o-transform-origin:50% 30%;transform:rotate(180deg);transform-origin:50% 30%;-webkit-transition:-webkit-transform .2s ease-in;-moz-transition:-moz-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;}
+#top .site:hover .Q-top{ display:block;}
+.Q-top{ padding:0px 10px; overflow:hidden; display:none; width:190px; position:absolute; z-index:2; background:#fff; right:0px; top:24px;border:solid 1px #ccc; }
+.Q-top-list{ border-top: dashed 1px #ccc; padding:5px 0px; margin-top:-1px; text-align:left; height:1%; overflow:hidden;}
+.Q-top-list span{ float:left; display:block; width:40px;}
+.Q-top-list ul{ float:left; width:150px; height:1%; overflow:hidden;}
+.Q-top-list ul li{ width:50%; float:left; height:24px; white-space:nowrap;}
+.Q-top-list ul li a{ padding:0px;}
+
+#scroll-top{height:40px; display:none;width:40px; z-index:997; background-position:-96px -6px; position:fixed; right:10px; bottom:120px; opacity:0.5;filter:alpha(opacity=50);}
+#scroll-top:hover{opacity:1; filter:alpha(opacity=100);}
+
+/* calendarItem */
+.checkInDate,.checkOutDate,.checkBirthDate{ background:url(../images/calender-bg.png) no-repeat center right #fff;}
+.plugin{background-image: url(../images/plugin.png);background-repeat: no-repeat}
+#calendar-item{ background:#fff;position:absolute;left:100px; top:100px;z-index:9998;border:solid 1px #aaa; padding:1px; border-radius:5px;}
+#calendar-main{ position:relative;border-radius:5px; height:1%;overflow:hidden;}
+#calendar-main .MonthBtn{ display:block; width:17px; height:16px; position:absolute; top:2px;}
+#calendar-main .prevMonth{ left:20px; background-position:-2px -32px;}
+#calendar-main .prevMonth:hover{background-position:-2px -49px;}
+#calendar-main .nextMonth{ right:20px; background-position:-2px -100px;}
+#calendar-main .nextMonth:hover{background-position:-2px -117px;}
+#calendar-main #disabledPrevMonth{background-position:-2px -66px; cursor:default;}
+#calendar-main #disabledNextMonth{background-position:-2px -83px; cursor:default;}
+.calendar-group{ width:185px; float:left;}
+.calendar-title{ height:22px; line-height:22px; text-align:center; background:#e8eff5;font-family:Verdana; font-weight:bold;}
+.calendar-month{ background:#fff;margin:5px 0px 5px -1px; border-left:solid 1px #aaa; padding:0px 5px;}
+.calendar-week{ height:24px;line-height:24px; }
+.calendar-week span{display:inline-block;zoom:1;width:25px;text-align:center; color:#777; background:#fff; float:left; font-weight:bold;}
+.calendar-week span.weekend{ color:#f60;}
+.calendar-day{ position:relative;}
+.calendar-day ul{ position:relative; z-index:9999; display:block; height:100%;}
+.calendar-day ul li{ float:left;}
+.calendar-day ul li a{ display:block; color:#666; width:24px; height:20px; line-height:20px; text-align:center; padding:0px 0px 1px 1px;font-family:Verdana;font-weight:bold;float:left;background:url(../images/plugin.png) no-repeat 100px 100px;}
+.calendar-day ul li a:hover{ text-decoration:none; background-position:-1px -135px; color:#333;}
+.calendar-day ul li a.weekend{ color:#f60;}
+.calendar-day ul li a.check{ background-position:-1px -157px; color:#09c;}
+.calendar-day ul li a.now{ color:#b00;}
+.calendar-day ul li a.disabled{ color:#777; font-weight:normal; background:none; cursor:default;}
+.calendar-singleMonth{ height:106px;position:absolute;left:0px; top:0px;width:175px; font-size:80px; font-style:italic;text-align:center; line-height:106px; opacity:0.1; filter:alpha(opacity=10); font-family:arial;}
+/* birth-calendar */
+#birth-calendar{background:#fff;position:absolute;z-index:9998;border:solid 1px #aaa; padding:5px; border-radius:5px; width:184px;}
+.birth-calendar-t{ font-size:14px; font-weight:normal; margin-bottom:5px; text-align:center; border-bottom:solid 1px #ddd; padding-bottom:3px; margin-top:-3px;}
+#birth-year{ position:relative;}
+.selectYearBtn{ position:absolute; top:84px; height:50px; width:20px; cursor:pointer; overflow:hidden;background:url(../images/y-bg.png) repeat; display:none;}
+.selectYearBtn:hover{background:url(../images/y-hover.png) repeat;}
+.selectPrevBtn{ left:0px;}
+.selectNextBtn{ right:0px;}
+.selectYearBtn em{ display:block; width:12px; height:22px; margin:14px 0px 0px 4px;}
+.selectPrevBtn em{background-position:-2px -211px;}
+.selectNextBtn em{background-position:-16px -211px;}
+#birth-year:hover .selectYearBtn{ display:block;}
+#disabledSelectPrevBtn,#disabledSelectNextBtn,#disabledSelectPrevBtn:hover,#disabledSelectNextBtn:hover{ cursor:default; display:none;}
+#birth-year:hover #disabledSelectPrevBtn,#birth-year:hover #disabledSelectNextBtn{ display:none;}
+.birth-month,.birth-days{ display:none;}
+#birth-calendar li{-webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+.selectBox{ width:184px; overflow:hidden;}
+.selectBox .selectList{ width:378px;}
+.selectList-s,.selectList-d{ height:1%; overflow:hidden; margin:-5px 0px 0px -5px;float:left; width:189px; padding-right:5px;}
+.selectList-s li{float:left; display:block; background:#50c7ff; color:#fff; text-align:center; margin:5px 0px 0px 5px; width:58px; height:35px; line-height:35px; cursor:pointer; font-size:16px; font-family:Verdana,arial; font-style:italic;}
+.selectList-s li.disabled,.selectList-s li.disabled:hover{ background:#ccc; cursor:default;}
+.selectList-s li:hover{ color:#fff; background:#ffb547;}
+#birth-calendar-week{ height:24px; line-height:24px; margin:0px 0px 5px -5px; color:#666;}
+#birth-calendar-week span{ display:block; float:left; width:22px; height:24px; text-align:center; margin-left:5px;}
+.selectList-d li{float:left; display:block;color:#fff; background:#50c7ff;text-align:center;cursor:pointer; margin:5px 0px 0px 5px; width:22px; height:22px; line-height:22px;  font-size:12px; font-family:Verdana,arial; font-style:italic;}
+.selectList-d li:hover{ color:#fff; background:#ffb547;}
+.selectList-d li.disabled,.selectList-d li.disabled:hover{ background:#eee; cursor:default; color:#ddd;}
