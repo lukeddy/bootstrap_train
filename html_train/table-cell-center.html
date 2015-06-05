@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+<head> 
+<meta charset="utf-8">
+<title>控制position:absolute元素居中</title> 
+<style type="text/css"> 
+body{
+	margin:0px;
+} 
+
+.wrapper{
+	width:1000px;
+	margin:auto;
+	border:1px solid #ddd;
+	background-color:rgba(123,234,126,0.8);
+	position:relative;
+}
+</style>
+</head> 
+<body> 
+<div class="wrapper">
+	    <h3>使用table cell元素水平垂直居中</h3>
+	    <br>
+	    <br>
+	    <br>
+		<style>
+
+	        .box1{ width: 100%;background:tomato;opacity: 0.8;}
+		    .box1 .thumb{ width:120px; height:120px; border:1px solid #ccc; display:table-cell;/*最重要*/ vertical-align:top;/*设置水平居中*/ }
+			.box1 img{border:none;display:block; max-width:100%; max-height:100%;margin:auto;/*设置垂直居中*/ }
+			.box1 .info{display: table-cell;}
+
+	        .box2{ width: 100%;background:tomato;opacity: 0.8;}
+		    .box2 .thumb{ width:120px; height:120px; border:1px solid #ccc; display:table-cell;/*最重要*/ vertical-align:middle;/*设置水平居中*/ }
+			.box2 img{border:none; max-width:100%; max-height:100%;/*设置垂直居中*/ }
+			.box2 .info{display: table-cell;}
+
+	        .box3{ width: 100%;background:tomato;opacity: 0.8;}
+		    .box3 .thumb{ width:120px; height:120px; border:1px solid #ccc; display:table-cell;/*最重要*/ vertical-align:middle;/*设置水平居中*/ }
+			.box3 img{ display:block;border:none; max-width:100%; max-height:100%; margin:auto;/*设置垂直居中*/ }
+			.box3 .info{display: table-cell;}
+		</style>
+		<h3>示例：水平居中</h3>
+		<div class="box1">
+    		<div class="thumb">
+    			<img src="images/img2.png" alt="">
+    		</div>
+    		
+    		<div class="info">
+    			<ul>
+    				<li>价格:$100</li>
+    				<li>尺寸：123，颜色：绿色</li>
+    				<li>产品详情，更新中...</li>
+    			</ul>
+    		</div>
+    	</div>
+    	<h3>示例：垂直居中</h3>
+		<div class="box2">
+    		<div class="thumb">
+    			<img src="images/img2.png" alt="">
+    		</div>
+    		
+    		<div class="info">
+    			<ul>
+    				<li>价格:$100</li>
+    				<li>尺寸：123，颜色：绿色</li>
+    				<li>产品详情，更新中...</li>
+    			</ul>
+    		</div>
+    	</div>
+    	<h3>示例：水平垂直居中</h3>
+    	<div class="box3">
+    		<div class="thumb">
+    			<img src="images/img2.png" alt="">
+    		</div>
+    		
+    		<div class="info">
+    			<ul>
+    				<li>价格:$100</li>
+    				<li>尺寸：123，颜色：绿色</li>
+    				<li>产品详情，更新中...</li>
+    			</ul>
+    		</div>
+    	</div>
+</div>
+</body> 
+</html> 
