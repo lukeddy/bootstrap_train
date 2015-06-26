@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>静态页面国际化示例</title>
+</head>
+<body>
+<h1>跳转页面</h1>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/purl.js"></script>
+<script>
+    $(function(){
+          var currURL=window.location.href;
+          //console.log(currURL);
+          var urlPrefix=currURL.substr(0,currURL.lastIndexOf("/")+1);
+          //console.log(urlPrefix);
+          var lang=purl().param('lang'); //取得参数lang的值
+          //console.log(lang);
+          var page="test_zh.html"; //默认显示
+          if(lang){
+              lang=(lang+"").toLowerCase();
+              if(lang.indexOf("zh")!=-1){ //中文
+                  page="test_zh.html";
+              }
+              if(lang.indexOf("en")!=-1){ //英文
+                  page="test_en.html";
+              }
+              if(lang.indexOf("es")!=-1){ //西班牙语
+                  page="test_es.html";
+              }
+          }
+
+          var gotoURL=urlPrefix+page;
+          window.location.href=gotoURL;
+    });
+</script>
