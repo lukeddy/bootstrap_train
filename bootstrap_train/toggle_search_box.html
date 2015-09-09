@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .main-wrapper{
+            background-color:#666666;
+            color:#fff;
+        }
+        .col-md-3{
+            padding:8px;
+        }
+        .thumbnail{
+            padding:10px;
+        }
+        .trading-item{
+            border:1px solid #fff;
+            padding:5px 15px;
+        }
+        .trading-item .thumbnail{
+            position:relative;
+            height:300px;
+        }
+        .trading-item .thumbnail img{
+            display: block;
+            max-width:210px;
+            max-height: 236px;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        th{
+            color: #fff;
+            font-size:15px;
+            text-align:center;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        td{
+            border-top:0px;
+            color:#fff;
+            padding:3px;
+        }
+        .my-form-control{
+            display: inline-block;
+            /*width: 100%;*/
+            height: 34px;
+            padding: 6px 12px;
+            margin-top:8px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+    </style>
+</head>
+<body>
+<h1 class="page-header text-center">使用jquery cookie,bootstrap实现显示隐藏页面区域，下次打开时显示历史状态</h1>
+<div class="container">
+        <p>
+        <label class="pull-left">搜索条件</label>
+        <a href="javascript:void(0);" class="btn btn-link pull-right" style="color:#099ad0;" data-value="zhankai" id="btnToggleSearchBox">收起</a>
+    </p>
+    <br/>
+    <!-- <div class="row" id="search-box" style="display: none;"> -->
+    <div class="row" id="search-box">
+        <table>
+            <tr>
+                <th>搜索条件1</th>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-primary">所有xxx</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-default">条件1</a>
+                    <a href="javascript:void(0);" class="btn btn-default">条件2</a>
+                    <a href="javascript:void(0);" class="btn btn-default">条件3</a>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>搜索条件2</th>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-primary">&nbsp;&nbsp;&nbsp;不限&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </td>
+                <td>
+                    <p>
+                        <input type="text" class="my-form-control" name="width" placeholder="宽度"/>
+                        <input type="text" class="my-form-control" name="height" placeholder="高度"/>
+                    </p>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>搜索条件3</th>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-primary">&nbsp;&nbsp;&nbsp;不限&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-default">有</a>
+                    <a href="javascript:void(0);" class="btn btn-default">无</a>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <th>搜索条件4</th>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-primary">&nbsp;&nbsp;&nbsp;不限&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-default">0</a>
+                    <a href="javascript:void(0);" class="btn btn-default">1</a>
+                    <a href="javascript:void(0);" class="btn btn-default">2</a>
+                    <a href="javascript:void(0);" class="btn btn-default">3</a>
+                    <a href="javascript:void(0);" class="btn btn-default">4</a>
+                    <a href="javascript:void(0);" class="btn btn-default">5</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" class="btn btn-default">搜索</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</body>
+</html>
+<script>
+    var KEY_TOGGLE_BTN="ShowSearchBoxVal";
+
+    $(function(){
+        showOrHideSearchBox();
+        //控制比赛详情列表显示与隐藏
+        $('#btnToggleSearchBox').click(function(){
+            var currDataValue=$(this).attr("data-value");
+            if(currDataValue==="zhankai"){
+                $.cookie(KEY_TOGGLE_BTN,"shouqi");
+                showOrHideSearchBox();
+            }
+            if(currDataValue==="shouqi"){
+                $.cookie(KEY_TOGGLE_BTN,"zhankai");
+                showOrHideSearchBox();
+            }
+        });
+    });
+
+
+    function showOrHideSearchBox(){
+        var currShowSearchBoxVal= $.cookie(KEY_TOGGLE_BTN);
+        if(currShowSearchBoxVal==="shouqi"){
+            $("#search-box").hide("slow");
+            $('#btnToggleSearchBox').html("展开").attr("data-value","shouqi");
+        }else{
+            $("#search-box").show("slow");
+            $('#btnToggleSearchBox').html("收起").attr("data-value","zhankai");
+        }
+    }
+
+</script>
