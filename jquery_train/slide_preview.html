@@ -7,6 +7,8 @@
     <meta http-equiv="expires" content="0">
     <title>预览大图</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://cdn.bootcss.com/Buttons/2.0.0/css/buttons.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/animate.css/3.4.0/animate.min.css" rel="stylesheet">
     <style>
         body{
             background:#666666;
@@ -151,7 +153,7 @@
 <body>
 <div class="main">
     <p class="img-wrapper">
-        <img  class="thumbnail-img" id="previewImg" src="http://img.fotor.mobi/public/88/6E60B8EE1091435C942C069D0A21304B_middle.jpg" alt="">
+        <img  class="thumbnail-img" id="previewImg" src="" alt="">
     </p>
     <button class="arrow-left" id="btnPre"></button>
     <button class="arrow-right" id="btnNext"></button>
@@ -174,46 +176,39 @@
                 <td>上传时间：</td>
                 <td></td>
             </tr>
-            <tr>
-                <td><b style="color:dodgerblue;">HOT预选</b></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td> <b style="color:lightseagreen;">Inspire预选</b></td>
-                <td></td>
-            </tr>
         </table>
     </div>
     <div class="author-prop-box">
         <h3>作者属性</h3>
         <table>
             <tr>
-                <td>HOT:</td>
+                <td>作者属性1:</td>
                 <td>xxx张</td>
             </tr>
             <tr>
-                <td>Inspire:</td>
+                <td>作者属性2:</td>
                 <td>xxx张</td>
             </tr>
             <tr>
-                <td>Winner:</td>
+                <td>作者属性3:</td>
                 <td>xxx张</td>
             </tr>
         </table>
     </div>
     <div class="btn-box">
-        <a href="javascript:void(0);" class="btn btn-primary">设置HOT预选</a>
-        <a href="javascript:void(0);" class="btn btn-primary">取消HOT预选</a>
-        <a href="javascript:void(0);" class="btn btn-yanred ">设置Inspire预选</a>
-        <a href="javascript:void(0);" class="btn btn-yanred ">取消HOT预选</a>
+        <a href="javascript:void(0);" class="btn btn-primary" id="btnSuccess">成功</a>
+        <a href="javascript:void(0);" class="btn btn-primary" id="btnInfo">失败</a>
+        <a href="javascript:void(0);" class="btn btn-yanred " id="btnWarning">警告</a>
+        <a href="javascript:void(0);" class="btn btn-yanred " id="btnError">出错</a>
     </div>
 </div>
 </body>
 </html>
 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
+<script src="http://cdn.bootcss.com/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
 <script>
     $(function(){
-        var imgArr=["http://img.fotor.mobi/public/56/b0de61ba322348eda1489d27100d8cd1_middle.jpg","http://img.fotor.mobi/public/56/2b4c5818e3144c9fb0f197692df8d25e_middle.jpg","http://img.fotor.mobi/public/56/97a6b15b443b4aaaa1069df2fe8cc829_middle.png","http://img.fotor.mobi/public/56/1ff4d3bc531f4b4f9a0cc7b67395f1bd_middle.jpg","http://img.fotor.mobi/public/56/fe43a5049335492a95d101836c5da885_middle.jpg","http://img.fotor.mobi/public/56/e42b3cf9bfbe48f5b2c318ad658366df_middle.jpg","http://img.fotor.mobi/public/56/883db255faa549f18336a1993f439340_middle.jpg","http://img.fotor.mobi/public/56/88647525CFFD4740999E0B411C55CED9_middle.jpg","http://img.fotor.mobi/public/56/6c5efb7603f34e00b813f9a72302dd94_middle.jpg","http://img.fotor.mobi/public/56/7DE7117C94774BBFA22865FEDFA85F23_middle.jpg","http://img.fotor.mobi/public/56/4B02B0163BAC4A6D81E770B244332146_middle.jpg","http://img.fotor.mobi/public/56/30463A2DF482462CB2B565C5ABE05254_middle.jpg","http://img.fotor.mobi/public/56/3BCD15AB9BAC45E1BDE6ED3323F09B53_middle.jpg","http://img.fotor.mobi/public/56/7A64CBEC25B845D188751A3ECC7A60B3_middle.jpg","http://img.fotor.mobi/public/56/7DC5CB237D7940C1BAC3868E7809F033_middle.jpg","http://img.fotor.mobi/public/56/7CC665F227FC40C7AB723B7FB598E474_middle.jpg","http://img.fotor.mobi/public/56/8E0E3E7A259F46DC977F1A971B17DB0D_middle.jpg","http://img.fotor.mobi/public/56/3879F5ABEFC24E5CBF6D773F157A34C0_middle.jpg","http://img.fotor.mobi/public/56/97623BBE25974998ABFB31808B8B382A_middle.jpg","http://img.fotor.mobi/public/56/F18EEED466764C69B62A8D4B1717B36D_middle.jpg","http://img.fotor.mobi/public/56/8A7AB8580C7445E4AC879DB40ADFC9E2_middle.jpg","http://img.fotor.mobi/public/56/058C6C8096034FBA87BDD17388BB1D06_middle.jpg","http://img.fotor.mobi/public/56/9096AFE27760469F8B6E9B6DB1BE314E_middle.jpg","http://img.fotor.mobi/public/56/280D6ACA9BA34F3F931E7D09617739BA_middle.jpg","http://img.fotor.mobi/public/56/D2A28F4EAED9430BB34350634BBA406B_middle.jpg","http://img.fotor.mobi/public/56/81429F3E420149DDB7C25A142146A4B2_middle.jpg","http://img.fotor.mobi/public/56/05766A5AE4B64480A923D03D6775BE3D_middle.jpg","http://img.fotor.mobi/public/56/2836A11E11DA46338C284B81DEB600FC_middle.jpg","http://img.fotor.mobi/public/56/81468b014b5f46dbb6b9fff611fb5fbf_middle.JPG","http://img.fotor.mobi/public/56/ef0289584f67465f918677e80c329ff6_middle.jpg"];
+        var imgArr=["http://www.bz55.com/uploads/allimg/140724/138-140H4092938.jpg","http://www.juzi2.com/uploads/allimg/130619/1_130619193218_1.jpg","http://www.qqpk.cn/Article/UploadFiles/201407/20140711101445200.jpg","http://d.hiphotos.baidu.com/zhidao/pic/item/f11f3a292df5e0fe222567905e6034a85edf7266.jpg","http://www.33.la/uploads/20141114bztp/1764.jpg","http://pic19.nipic.com/20120301/9476109_135717565127_2.jpg"];
         var currImgIndex=0;
         var totalImg=imgArr.length;
         console.log(imgArr[currImgIndex]);
@@ -234,10 +229,94 @@
             refreshImgSrc(imgArr[currImgIndex]);
         });
         refreshImgSrc(imgArr[currImgIndex]);
+
+
+
+        //按钮事件
+        $('#btnSuccess').on('click',function(){
+        	  generate('success', notification_html[3]);
+        });
+        $('#btnInfo').on('click',function(){
+        	  generate('information', notification_html[2]);
+        });
+        $('#btnWarning').on('click',function(){
+        	  generate('warning', notification_html[0]);
+        });
+        $('#btnError').on('click',function(){
+        	   generate('error', notification_html[1]);
+        });
     });
 
     function refreshImgSrc(src){
         console.log("currSrc:"+src);
         $('#previewImg').attr('src',src);
     }
+
+
+    /**
+     * 产生弹出消息
+     * @param type
+     * @param text
+     */
+    function generate(type, text) {
+
+        // var n = noty({
+        //     text        : text,
+        //     type        : type,
+        //     dismissQueue: true,
+        //     killer      : true,
+        //     timeout     :1000,
+        //     layout      : 'topRight',
+        //     closeWith   : ['click'],
+        //     theme       : 'relax',
+        //     maxVisible  : 10,
+        //     animation   : {
+        //         open  : 'animated bounceInRight',
+        //         close : 'animated bounceOutRight',
+        //         easing: 'swing',
+        //         speed : 500
+        //     }
+        // });
+        // console.log('html: ' + n.options.id);
+
+         //自动关闭，注意：要使自动关闭起效果，不能设置buttons属性
+		var n = noty({
+		            text        : text,
+		            type        : type,
+		            dismissQueue: true,
+		            killer      : true,
+		            timeout     : 2000,
+		            layout      : 'topRight',
+		            // closeWith   : ['click'],
+		            theme       : 'relax',
+		            maxVisible  : 10,
+		            animation   : {
+		                open  : 'animated bounceInRight',
+		                close : 'animated bounceOutRight',
+		                easing: 'swing',
+		                speed : 500
+		            }
+		        });
+         console.log('html: ' + n.options.id);
+    }
+
+    var notification_html = [];
+    notification_html[0] = '<div class="activity-item"><div class="activity"> There are <a href="#">6 new tasks</a> waiting for you. Don\'t forget! <span>About 3 hours ago</span> </div> </div>',
+    notification_html[1] = '<div class="activity-item"><div class="activity"> Mail server was updated. See <a href="#">changelog</a> <span>About 2 hours ago</span> </div> </div>',
+    notification_html[2] = '<div class="activity-item"><div class="activity"> Your <a href="#">latest post</a> was liked by <a href="#">Audrey Mall</a> <span>35 minutes ago</span> </div> </div>',
+    notification_html[3] = '<div class="activity-item"><div class="activity"> <a href="#">Eugene</a> ordered 2 copies of <a href="#">OEM license</a> <span>14 minutes ago</span> </div> </div>';
+
+    function generateAll() {
+        generate('warning', notification_html[0]);
+        generate('error', notification_html[1]);
+        generate('information', notification_html[2]);
+        generate('success', notification_html[3]);
+    }
+
+    $(function(){
+        setTimeout(function() {
+            generateAll();
+        }, 500);
+    });
+
 </script>
