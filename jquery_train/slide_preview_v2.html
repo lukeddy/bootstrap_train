@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <title>图片轮播查看器</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://cdn.bootcss.com/Buttons/2.0.0/css/buttons.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/animate.css/3.4.0/animate.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/zoom.js/0.0.3/zoom.css" rel="stylesheet">
+    <style>
+        body{
+            background:#222a2d;
+            color:#fff;
+            font-family:'Open Sans';
+            font-size:14px;
+        }
+        .main{
+
+        }
+        .arrow-left,.arrow-right{
+            width:90px;
+            height:110px;
+            margin:-55px 0 0;
+            opacity: 0.5;
+            position:absolute;
+            top:50%;
+            background: none;
+            border:none;
+            outline: none;
+            cursor: pointer;
+        }
+        .arrow-left{
+            left:0;
+        }
+
+        .arrow-right{
+            right:0;
+        }
+        .arrow-left:hover,.arrow-right:hover{
+            opacity: 1;
+        }
+        .arrow-left:after{
+            content: " ";
+            display: block;
+            width:0px;
+            height:0px;
+            border-bottom:15px solid transparent;  /* left arrow slant */
+            border-top:15px solid transparent; /* right arrow slant */
+            border-right:17px solid #fff; /* bottom, add background color here */
+            font-size:0px;
+            line-height:0px;
+            margin-left: 35px;
+            margin-top:35px;
+            position:absolute;
+            left:0;
+            top:0;
+            box-sizing:border-box;
+        }
+
+        .arrow-right:after{
+            content: " ";
+            display: block;
+            width:0px;
+            height:0px;
+            border-bottom:15px solid transparent;  /* left arrow slant */
+            border-top:15px solid transparent; /* right arrow slant */
+            border-left:17px solid #fff; /* bottom, add background color here */
+            font-size:0px;
+            line-height:0px;
+            margin-left: 35px;
+            margin-top:35px;
+            position:absolute;
+            left:0;
+            top:0;
+            box-sizing:border-box;
+        }
+        .img-wrapper{
+            text-align: center;
+        }
+        .thumbnail-img{
+            max-width: 100%;
+            max-height: 690px;
+            margin: auto;
+            position: absolute;
+            top: 33px;
+            bottom: 212px;
+            left: 0;
+            right: 0;
+        }
+        .btn{
+            display: inline-block;
+            padding: 8px 14px;
+            font-size: 14px;
+            color: #fff;
+            border: 1px solid #FFF;
+            border-radius: 2px;
+            vertical-align: middle;
+            position: relative;
+            background:#fff;
+            text-decoration: none;
+            text-align: center;
+            text-shadow:none;
+        }
+        .btn-primary, .btn-primary:focus {
+            background-color: #428bca !important;
+            border-color: #428bca;
+        }
+        .btn-primary:hover, .open .btn-primary ,.dropdown-toggle {
+            background-color: #1b6aaa !important;
+            border-color: #428bca;
+        }
+        .btn-yanred {
+            background: rgb(220 ,60, 38) !important;
+            border-color: rgb(220 ,60, 38);
+        }
+        .btn-yanred:hover {
+            background: rgb(204, 54, 33) !important;
+            border-color: rgb(177, 39, 20);
+        }
+        .btn:hover{
+            background:#428bca;
+            color:#fff;
+            border-color: #428bca;
+            text-decoration: none;
+        }
+        .btn-watermark{
+            background: #ff3578;
+            color:#fff;
+            border-color: #ff3578;
+            text-decoration: none;
+        }
+        .btn-watermark:hover{
+            background: #ff2262;
+            border-color: #ff2262;
+        }
+        .img-page-box{
+            font-size: 120px;
+            text-align: right;
+            min-width: 300px;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+        }
+        .btn-box{
+            width:120px;
+            position: absolute;
+            right:80px;
+            bottom:100px;
+        }
+        .btn-box .btn{
+          display: block;
+          width: 100%;
+          margin-bottom:10px;
+        }
+        .img-prop-box,.desc-info{
+            width:300px;
+            height:auto;
+            position:absolute;
+            left:20px;
+        }
+        .img-prop-box{
+            top:0;
+        }
+        .desc-info{
+            top:60%;
+        }
+        .thumbnail-wrapper{
+            width:700px;
+            text-align: center;
+            /*border:1px solid blue;*/
+            margin:auto;
+            position:absolute;
+            bottom:30px;
+            left:0;
+            right:0;
+        }
+        .mythumbnail{
+            width:672px;
+            /*overflow-x: scroll;*/
+            overflow: hidden;
+        }
+        .pager{
+            font-size:18px;
+            font-weight:bold;
+        }
+        .thumbbox{
+            width:2000px;/*默认宽度，具体宽度根据图片多少计算*/
+            height:100px;
+            overflow: hidden;
+        }
+        .thumbbox img{
+            display: inline-block;
+            width:80px;
+            height:80px;
+            border: 3px solid #fff;
+            cursor: pointer;
+            margin:5px;
+            float: left;
+        }
+        .thumbbox img:hover,.thumbbox img.active{
+            border-color:#ff3578;
+        }
+        /*重写大图弹出层样式*/
+        .zoom-overlay {
+		  z-index: 420;
+		  background: #222;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  pointer-events: none;
+		  filter: "alpha(opacity=0)";
+		  opacity: 0;
+		  -webkit-transition:      opacity 300ms;
+		       -o-transition:      opacity 300ms;
+		          transition:      opacity 300ms;
+		}
+		.zoom-overlay-open .zoom-overlay {
+		  filter: "alpha(opacity=100)";
+		  opacity: 0.9;
+		}
+    </style>
+</head>
+<body>
+<div class="main">
+    <p class="img-wrapper" id="imgWrapper">
+        <img  class="thumbnail-img" id="previewImg" src="" data-action="zoom">
+    </p>
+    <div class="thumbnail-wrapper">
+        <p class="pager"><span id="currPage"></span>/<span id="totalPage"></span></p>
+        <div class="mythumbnail">
+            <div class="thumbbox" id="thumbbox">
+
+            </div>
+        </div>
+    </div>
+    <button class="arrow-left" id="btnPre"></button>
+    <button class="arrow-right" id="btnNext"></button>
+    <div class="img-prop-box">
+        <h3>图片信息</h3>
+        <table>
+            <tr>
+                <td>名称：</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>图片ID</td>
+                <td id="pid"></td>
+            </tr>
+            <tr>
+                <td>大小：</td>
+                <td id="photoSize"></td>
+            </tr>
+            <tr>
+                <td>尺寸：</td>
+                <td id="photoWidthAndHeight"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="desc-info">
+        <h3>功能支持：</h3>
+        <p>支持图片轮播，缩略图切换</p>
+    	<p>支持键盘左右键切换图片</p>
+    	<p>支持点击显示大图</p>
+    </div>
+    <div class="btn-box">
+        <a href="javascript:void(0);" class="btn btn-primary btnChange">你好</a>
+        <a href="javascript:void(0);" class="btn btn-yanred  btnChange">我好</a>
+        <a href="javascript:void(0);" class="btn btn-watermark btnChange">大家好</a>
+    </div>
+</div>
+</body>
+</html>
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
+<script src="http://cdn.bootcss.com/jquery-noty/2.3.7/packaged/jquery.noty.packaged.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/transition.min.js"></script>
+<script src="http://cdn.bootcss.com/zoom.js/0.0.3/zoom.min.js"></script>
+<script>
+    var currIndex=0;
+    var photoArray=[
+        {
+        	id:1,
+        	name:'I am MR Right',
+        	photoSize:'200K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://www.bz55.com/uploads/allimg/140724/138-140H4092938.jpg',
+        },
+        {
+        	id:2,
+        	name:'I am MR Wrong',
+        	photoSize:'10K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://www.juzi2.com/uploads/allimg/130619/1_130619193218_1.jpg',
+        },
+        {
+        	id:3,
+        	name:'I am Mr correct!',
+        	photoSize:'400K',
+        	photoWidth:123,
+        	photoHeight:456,
+            photoURL:'http://www.qqpk.cn/Article/UploadFiles/201407/20140711101445200.jpg',
+        },
+        {
+        	id:3,
+        	name:'I am MR Right',
+        	photoSize:'200K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://www.vow.cn/ch/images/img_vowBox6_03.jpg',
+        },
+        {
+        	id:4,
+        	name:'I am MR Wrong',
+        	photoSize:'10K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://www.vow.cn/ch/images/img_vowBox6_01.jpg',
+        },
+        {
+        	id:5,
+        	name:'I am Mr correct!',
+        	photoSize:'400K',
+        	photoWidth:123,
+        	photoHeight:456,
+            photoURL:'http://www.vow.cn/ch/images/vow_img_03.jpg',
+        },
+        {
+        	id:6,
+        	name:'I am MR Right',
+        	photoSize:'200K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://pic19.nipic.com/20120301/9476109_135717565127_2.jpg',
+        },
+        {
+        	id:7,
+        	name:'I am MR Wrong',
+        	photoSize:'10K',
+        	photoWidth:200,
+        	photoHeight:200,
+            photoURL:'http://www.33.la/uploads/20141114bztp/1764.jpg',
+        },
+        {
+        	id:8,
+        	name:'I am Mr correct!',
+        	photoSize:'400K',
+        	photoWidth:123,
+        	photoHeight:456,
+            photoURL:'http://d.hiphotos.baidu.com/zhidao/pic/item/f11f3a292df5e0fe222567905e6034a85edf7266.jpg',
+        }
+    ];
+
+
+    var photoCount=photoArray.length;
+    var thumbItemWidth=96;
+
+    $(function(){
+    	//初始化缩略图
+        initThumbnailBox();
+
+        $('#btnPre').on("click",function(){
+            prePhoto();
+        });
+        $('#btnNext').on("click",function(){
+            nextPhoto();
+        });
+        $("body").keydown(function(e) {
+            if(e.keyCode == 37) { //点击键盘左箭头
+                prePhoto();
+            }
+            else if(e.keyCode == 39) { //点击键盘右箭头
+                nextPhoto();
+            }
+            e.preventDefault();
+        });
+        refreshPhotoInfo(photoArray[currIndex]);
+
+        //按钮事件
+        $('.btn').on('click',function(){
+             generate('success', $(this).text());
+        });
+
+        //缩略图事件
+        $('.thumbbox img').on('click',function(){
+            currIndex=parseInt($(this).attr('data-index'));
+            refreshPhotoInfo(photoArray[currIndex]);
+        });
+
+    });
+
+    /**
+     * 初始化缩略图
+     * */
+    function initThumbnailBox(){}{
+        var thumbnailHtml='';
+        $.each(photoArray,function(i,p){
+            if(currIndex==i){
+                thumbnailHtml+='<img class="active" data-id="'+ p.id+'" data-index="'+i+'" src="'+ p.photoURL+'">';
+            }else{
+                thumbnailHtml+='<img data-id="'+ p.id+'" data-index="'+i+'" src="'+ p.photoURL+'">';
+            }
+        });
+        $('#thumbbox').width(photoCount*thumbItemWidth);
+        $('#thumbbox').html(thumbnailHtml);
+    }
+
+    function refreshCurrThumbnail(){
+        $('.thumbbox img').each(function(i,e){
+            if(currIndex==$(e).attr('data-index')){
+                $(e).addClass('active');
+            }else{
+                $(e).removeClass('active');
+            }
+        });
+
+        var $activeImgPosition=$('img.active').position();
+        var clickedPosition=$activeImgPosition.left+thumbItemWidth;
+        var currLeftScrollDistance=$('.mythumbnail').scrollLeft();
+        if(clickedPosition>(700/2)){//点击可见区域右侧，向左移动一个单元
+            $('.mythumbnail').animate({scrollLeft:(currLeftScrollDistance+thumbItemWidth)},500);
+        }
+        if(clickedPosition<(700/2)){//点击可见区域左侧，向右移动一个单元
+            $('.mythumbnail').animate({scrollLeft:(currLeftScrollDistance-thumbItemWidth)},500);
+        }
+    }
+
+    function prePhoto(){
+        if(currIndex<=0){
+            currIndex=0;
+            generate('warning', "没有了，已经是第一张图了");
+            return;
+        }else{
+            currIndex-=1;
+        }
+        refreshPhotoInfo(photoArray[currIndex]);
+    }
+
+    function nextPhoto(){
+        if(currIndex>=(photoCount-1)){
+            currIndex=photoCount-1;
+            generate('warning', "没有了，已经是最后一张图了");
+            return;
+        }else{
+            currIndex+=1;
+        }
+        refreshPhotoInfo(photoArray[currIndex]);
+    }
+
+    function refreshPhotoInfo(photo){
+        $('#authorTableBox').html('');
+        refreshCurrThumbnail();
+        if(photo){
+            $('#currPage').html(currIndex+1);
+            $('#totalPage').html(photoCount);
+
+            $('#name').html(photo.name);
+            $('#pid').html(photo.id);
+            $('#photoSize').html(photo.photoSize);
+            $('#photoWidthAndHeight').html(photo.photoWidth+"x"+ photo.photoHeight);            
+            $('#previewImg').attr('src', photo.photoURL);
+
+            //将图片ID存放到按钮的自定义属性中
+            $('.btnChange').attr('data-id', photo.id);
+
+        }
+    }
+
+    /**
+     * 产生弹出消息
+     * @param type
+     * @param text
+     * note地址：https://github.com/needim/noty
+     */
+    function generate(type, text) {
+        var n = noty({
+            text        : text,
+            type        : type,
+            dismissQueue: true,
+            killer      : true,
+            timeout     : 3000,
+            layout      : 'topRight',
+            // closeWith   : ['click'],
+            template:   '<div class="activity-item"><div class="activity">'+text+'</div></div>',
+            theme       : 'relax',
+            maxVisible  : 10,
+            animation   : {
+                open  : 'animated bounceInRight',
+                close : 'animated bounceOutRight',
+                easing: 'swing',
+                speed : 800
+            }
+        });
+        //console.log('html: ' + n.options.id);
+    }
+</script>
