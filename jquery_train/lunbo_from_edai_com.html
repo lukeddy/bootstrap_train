@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>edai.com轮播特效</title>
+    <style type="text/css">
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form, ul, ol, li, input {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/15px 'Microsoft YaHei','Simsun',Arial,Helvetica,sans-serif;
+    background-color: #fafafa;
+    color: #666;
+    height: 100%;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+  .title {
+    height: 35px;
+    border-bottom: 1px solid #999;
+}
+.adviser{width:1200px;height:262px;margin:20px auto;position:relative;overflow:hidden;}
+.device .prev,.device .next{width:27px;height:36px;display:block;position:absolute;top:120px;cursor:pointer;}
+.device .prev{left:0px;background-position: -731px -76px;}
+.device .next{right:0px;background-position: -1000px -66px;}
+.adviser ul{list-style:none;}
+.adviser ul li{position:absolute;background-color:#fff;border:1px solid #ddd;}
+.adviser ul .wait{display:none;}
+.adviser ul .no0{width:120px;height:180px;top:45px;left:-130px;}
+.adviser ul .no1{width:120px;height:180px;top:45px;left:0px;}
+.adviser ul .no2{width:120px;height:180px;top:45px;left:130px;}
+.adviser ul .no3{width:120px;height:180px;top:45px;left:260px;}
+.adviser ul .no4{width:420px;height:260px;top:0px;left:390px;}
+.adviser ul .no5{width:120px;height:180px;top:45px;left:820px;}
+.adviser ul .no6{width:120px;height:180px;top:45px;left:950px;}
+.adviser ul .no7{width:120px;height:180px;top:45px;left:1080px;}
+.adviser ul .no8{width:120px;height:180px;top:45px;left:1210px;}
+.adviser ul li img{width: 120px; height: 180px;}
+.adviser ul .no4 img{width: 173px; height: 260px;float: left;}
+.adviser ul li .info{width:207px;float:right;margin:30px 20px 0 0; display: none;}
+.adviser ul .no4 .info{display: block;}
+.adviser ul li .info .side-tit{margin-bottom:4px;}
+.adviser ul li .info .side-tit h5{height:20px;font-size:18px;line-height:20px;color:#333;float:left;}
+.adviser ul li .info .side-tit i{width:18px;height:22px;display:inline-block;margin-left:6px;}
+.adviser ul li .info .side-400{margin-top:15px;}
+.adviser ul li .info .side-400 span{font-family:"Arial";font-size:20px;color:#fe6c00;line-height:28px;}
+.adviser ul li .info .side-tel{height:40px;margin-top:0px;}
+.adviser ul li .info .side-tel input[type="text"]{width:130px;height:30px;font-size:14px;line-height:24px;border:1px solid #ddd;margin-left: -12px;vertical-align: middle;}
+.adviser ul li .info .side-tel input[type="button"]{width:70px;height:30px;background-color:#009944;color:#fff;font-size:14px;vertical-align: middle;cursor:pointer}
+.adviser ul li .info .side-tel input[type="submit"]:hover{background-color:#6e9a20;}
+.adviser ul li .info .side-con{height:55px;overflow:hidden;margin-top:8px;font-size: 12px; line-height:18px;}
+.zheng{background-position: -324px -99px;}
+.nuo{background-position: -344px -99px;}
+ </style>
+</head>
+<body>
+
+<div class="wrap mt30 clearfix">
+        <div class="title clearfix">
+            <h3><i></i>找贷款顾问</h3><span>贷款很专业，贷款顾问为您提供一对一专业贷款咨询服务！</span><a class="more" href="/shangjia/guwen.html" rel="nofollow" target="_blank">更多+</a>
+        </div>
+        <div class="adviser" id="adviser">
+            <ul>
+                                <li class="no3" style="width: 365.614px; height: 245.497px; top: 8.15796px; left: 366.433px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=1" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=1" target="_blank">覃曦</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_1" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">房屋抵押贷款，汽车抵押贷款，个人信用贷款！高效免费为你量身打造融资方案</p>
+                    </div>
+                </li>
+                                <li class="no4" style="width: 174.386px; height: 194.503px; top: 36.842px; left: 742.046px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=2" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="opacity: 0.0306331;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=2" target="_blank">王云梅</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_2" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">专做成都房产及汽车抵押贷款服务。咨询/短期资金周转，无产权也能操作</p>
+                    </div>
+                </li>
+                                <li class="no5" style="width: 120px; height: 180px; top: 45px; left: 926.433px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=3" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=3" target="_blank">韦丹</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_3" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">商品房、汽车抵押贷款咨询服务！手续简单快捷，当天拿钱！</p>
+                    </div>
+                </li>
+                                <li class="no6" style="width: 120px; height: 180px; top: 45px; left: 1056.43px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=4" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=4" target="_blank">周琦松</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_4" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">房产（成都市）抵押贷款咨询。汽车房产（成都市）短期用款当天放款</p>
+                    </div>
+                </li>
+                                <li class="no7" style="width: 120px; height: 180px; top: 45px; left: 1186.43px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=5" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=5" target="_blank">邓建华</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_5" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">房屋抵押贷款，汽车抵押贷款，个人信用贷款。高效免费为你量身打造融资方案！</p>
+                    </div>
+                </li>
+                                <li class="no8" style="width: 120px; height: 180px; top: 45px; left: 1210px;">
+                    <a href="/shenqing/?gwId=6" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=6" target="_blank">严秋香</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_6" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">专做成都房产及汽车抵押贷款服务。咨询/短期资金周转，无产权也能操作！</p>
+                    </div>
+                </li>
+                                <li class="no0" style="width: 120px; height: 180px; top: 45px; left: -23.5674px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=7" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=7" target="_blank">高静</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_7" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">专做(成都地区)房产及汽车抵押贷款服务。咨询/短期资金周转，无产权不能操作</p>
+                    </div>
+                </li>
+                                <li class="no1" style="width: 120px; height: 180px; top: 45px; left: 106.433px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=8" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=8" target="_blank">刘小林</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_8" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">专做成都范围的抵押贷款、无抵押贷款咨询。经验丰富、专业，一对一的服务，欢迎咨询！</p>
+                    </div>
+                </li>
+                                <li class="no2" style="width: 120px; height: 180px; top: 45px; left: 236.433px; overflow: hidden;">
+                    <a href="/shenqing/?gwId=9" target="_blank"><img src="http://d6.yihaodianimg.com/N03/M04/16/3D/CgQCs1N5MUiATsxVAADJLWXi5mk84700.jpg" alt="高级贷款顾问"></a>
+                    <div class="info" style="display: none;">
+                        <div class="side-tit clearfix"><h5><a href="/shenqing/?gwId=9" target="_blank">万娣</a></h5><i class="zheng"></i><i class="nuo"></i></div>
+                        <p>高级贷款顾问</p>
+                        <div class="side-400">
+                            <p>统一贷款热线：</p>
+                            <div><span>
+                                1234 5678                             </span>
+                            </div>
+                        </div>
+                        <form method="" action="" class="side-tel">
+                            <input type="text" placeholder="输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+                            <input type="button" id="huibo_9_9" value="免费通话" onclick="callback.call(this, '97795');">
+                        </form>
+                        <p class="side-con">专做(成都地区)房产及汽车抵押贷款服务。一对一贷款服务，资金问题一步解决！</p>
+                    </div>
+                </li>
+                            </ul>
+            <div class="device">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+     // 幻灯片插件
+$(document).ready(function() {
+$(".banner .slide").eSlide({//首页幻灯片
+        autoPlay : true
+});
+});
+;(function($) {
+    $.fn.eSlide = function(options) {
+        var defaults = {
+            time: 3000,
+            autoPlay: false,
+            start: 0,
+            curClass: "current",
+            delay: 500
+        }
+        var opts = $.extend({}, defaults, options);
+        var t = $(this);
+        return this.each(function() {
+            var $container = $(this).find(".slide-container");
+            var $item = $container.find("ul").children();
+            var timer, total = $item.size(),index = opts.start;
+            var html = '<div class="wrap"><div class="pagination"><ul></ul></div></div>';
+            $item.eq(opts.start).addClass(opts.curClass);
+            function createElement() {
+                $(html).appendTo(t);
+                $item.each(function(i) {
+                    t.find(".pagination ul").append('<li><a href="javascript:;">'+(i+1)+'</a></li>')
+                })
+            };
+            total > 1 ? createElement() : !0;
+            $pagination = t.find(".pagination");
+            $pagination.find("li").eq(opts.start).addClass(opts.curClass);
+            function play() {
+                $item.eq(index).fadeOut(opts.delay).next().fadeIn(opts.delay);
+                index++;
+                if (index == total) {
+                    index = 0;
+                    goto(index)
+                }
+                $pagination.find("li").eq(index).addClass("current").siblings().removeClass("current")
+            }
+            function goto(i) {
+                $item.eq(i).fadeIn(opts.delay).siblings().fadeOut(opts.delay)
+            }
+            $pagination.find("li").on("click",function() {
+                $(this).addClass("current").siblings().removeClass("current");
+                goto($(this).index());
+                index = $(this).index()
+            });
+            if (opts.autoPlay && total > 1) {
+                timer = setInterval(play, opts.time);
+                t.hover(function() {
+                clearInterval(timer)
+                },function() {
+                  timer = setInterval(play, opts.time)
+            })
+            }
+            
+        })
+    }
+})(jQuery);
+
+//图片滚动插件 
+;(function($){
+    $.fn.eScroll = function(options){
+        var defaults = {
+            autoPlay : false,
+            container : ".container",
+            nextPrev : false,
+            time : 3000
+            }
+        var opts = $.extend({}, defaults, options);
+        return this.each(function(a){
+            var $this = $(this);
+            var index = 1;
+            var ul = $this.find("ul");
+            var li = ul.children();
+            var w = ul.find("li").outerWidth(true);
+            var crrent = index = 0;
+            li.clone().appendTo(ul);
+            var lisize = ul.find("li").size();
+            ul.width(w * lisize);
+            if(opts.nextPrev){
+                $this.append('<a href="javascript:;" class="prev"></a><a href="javascript:;" class="next"></a>');
+                }
+            var $next = $this.find(".next");
+            var $prev = $this.find(".prev");
+            function next(){
+                if(index >= lisize / 2){
+                    ul.css("left", "0px");
+                    index = 0;
+                    }
+                    index++;
+                    ul.animate({left:-w*index},500);
+                    
+                }
+            function prev(){
+                if(index <= 0){
+                    ul.css("left", -ul.width() / 2);
+                    index = lisize / 2;
+                    }
+                    index--;
+                    ul.animate({left:-index*w},500);
+                    
+                }
+            $next.on("click",function(){
+                next()
+                });
+            $prev.on("click",function(){
+                prev()
+                });
+            if(opts.autoPlay){
+                var timer = setInterval(function(){
+                    next()
+                    }, opts.time);
+                $this.hover(function(){
+                  clearInterval(timer)
+                },function(){
+                  timer = setInterval(next, opts.time);
+                })
+                }
+            })
+        }
+})(jQuery);
+
+// slider调用配置
+$(document).ready(function() {
+    $(".partners .img-scroll").eScroll({
+        autoPlay: true
+    });
+    $(".adviser-slider").eScroll({
+        nextPrev: true,
+        autoPlay: true
+    });
+});
+
+/*tab切换*/
+$(document).delegate(".ui-tab", "mouseenter",function() {
+    $(this).delegate(".ui-tab-nav li","mouseover",function(){
+        var $icon = $(this).closest(".ui-tab-nav").find(".icon-cur");
+        if($icon.length){
+            //var left = $(this).position().left + $(this).outerWidth() / 2 - 17;
+            var left = $(this).position().left;
+            $icon.stop(true,false).animate({left:left});
+            };
+        $(this).addClass("active").siblings('li').removeClass("active");
+        $(this).closest(".ui-tab").find(".ui-tab-item").eq($(this).closest('.ui-tab-nav').find('li').index(this)).show().siblings(".ui-tab-item").hide();
+        $(this).closest(".ui-tab").find(".fr.dk-more").eq($(this).closest('.ui-tab-nav').find('li').index(this)).show().siblings(".fr.dk-more").hide();
+    })
+}),
+
+/*模拟下拉框*/
+$(document).delegate(".ui-select", "mouseenter",function(){ 
+    var input = $("input[type=hidden]",this),
+        sleHd = $(".select-value",this),
+        list = $(".select-list",this);
+    $(this).delegate(".select-value","click",function(){
+        $(this).parent().parent().css("zIndex","9");
+        $(this).parent().addClass("active")
+        list.is(":hidden") ? list.show() : !0;
+    }),
+    $(this).delegate(".select-list li","click",function(){
+        sleHd.find("span").text($(this).text()).css("color","#333");
+        $(this).css("background-color","#ebf5ff").siblings().css("background-color","");
+        input.val($(this).attr("data-val"));
+        list.hide();
+    })
+}),
+$(document).delegate(".ui-select","mouseleave",function(){
+    $(this).parent().css("zIndex","");
+    $(this).removeClass("active");
+    $(".select-list",this).hide();
+}),
+/*下拉菜单*/
+$(function(){
+    $menu = $(".ui-menu");
+    $menu.hover(function(){
+        var $icon = $(this).find(".icon-down");
+        $(this).css({zIndex:"99"}).find(".ui-menu-list").height($("li",$(this)).length * 35).stop().slideDown();
+        $icon.length && !!$.fn.rotate && $icon.rotate({animateTo: 180});
+    },function(){
+        $(this).css({zIndex:""}).find(".ui-menu-list").stop().slideUp();
+        var $icon = $(this).find(".icon-down");
+        $icon.length && !!$.fn.rotate && $(this).find(".icon-down").rotate({animateTo:0});
+    })
+})
+
+//URL重新组合
+function reSeoJumpUrl(obj,str){
+    var oldurl = $(obj).attr('oldurl');
+    var url = oldurl + str;
+    $(obj).attr('href',url);
+}
+
+//回呼移上去的号码显示效果
+$(document).ready(function(){
+    $('.dk-zx-i').mouseover(function(){
+        //自动读取cookie中拨打过yidai站商家的手机号码
+        if(lastestPhone){
+            if($(this).find('.ui-input').val()=='输入手机号码'){
+                $(this).find('.ui-input').val(lastestPhone).css('color','#222');
+            }   
+        }
+    }).mouseleave(function(){
+        if($(this).find('.ui-input').attr('tag')!=1){
+            obj = $(this).find('.ui-input').val('输入手机号码').css('color','#ababab');
+        }
+    })
+    $('.dl-zx-tel').find('.ui-input').css('color','#ababab');
+})
+//顶部二维码
+    function showQrcode(ti,img){
+    var d = dialog({
+         cancelValue: "关闭",
+         fixed: true,
+         title: ti,
+         width: 260,
+         content: '<div style="text-align:center"><img src="'+img+'"></div>'
+});
+    d.showModal();
+}
+
+//找贷款顾问轮播效果
+$(document).ready(
+    function() {
+         var interval;
+            interval = setInterval(function() {
+                $(".next").triggerHandler("click");
+                $(".no4").find(".info").fadeIn(1000).find("input[type='text']").val("");
+            }, 3000);
+
+            $("#adviser").hover(function(){
+                clearInterval(interval);
+            } , function(){
+                    interval = setInterval(function() {
+                    $(".next").triggerHandler("click");
+                    $(".no4").find(".info").fadeIn(1000).find("input[type='text']").val("");
+                }, 3000);
+            });
+
+        var json0 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": -130
+        }
+        var json1 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 0
+        }
+        var json2 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 130
+        }
+        var json3 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 260
+        }
+        var json4 = {
+            "width": 420,
+            "height": 260,
+            "top": 0,
+            "left": 390
+        }
+        var json5 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 820
+        }
+        var json6 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 950
+        }
+        var json7 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 1080
+        }
+        var json8 = {
+            "width": 120,
+            "height": 180,
+            "top": 45,
+            "left": 1210
+        }
+        $(".next").click(
+            function() {
+                
+                if (!$("#adviser li").is(":animated")) {
+                    //先交换位置
+                    $(".no1").animate(json0, 400);
+                    $(".no2").animate(json1, 400);
+                    $(".no3").animate(json2, 400);
+                    $(".no4").animate(json3, 400 );
+                    $(".no5").animate(json4, 400);
+                    $(".no6").animate(json5, 400);
+                    $(".no7").animate(json6, 400);
+                    $(".no8").animate(json7, 400);
+                    $(".no0").css(json6);
+                    //再交换身份
+                    $(".no0").attr("class", "wait");
+                    $(".no1").attr("class", "no0").find(".info").hide();
+                    $(".no2").attr("class", "no1").find(".info").hide();
+                    $(".no3").attr("class", "no2").find(".info").hide();
+                    $(".no4").attr("class", "no3").find(".info").hide();
+                    $(".no5").attr("class", "no4").find(".info").fadeIn(1000).find("input[type='text']").val("");
+                    $(".no6").attr("class", "no5").find(".info").hide();
+                    $(".no7").attr("class", "no6").find(".info").hide();
+                    $(".no8").attr("class", "no7").find(".info").hide();
+                    //$(".no3").next().find(".info").fadeIn(20000).find("input[type='text']").val("");
+                    //上面的交换身份，把no0搞没了！所以，我们让no1前面那个人改名为no0
+                    if ($(".no7").next().length != 0) {
+                        //如果no5后面有人，那么改变这个人的姓名为no6
+                        $(".no7").next().attr("class", "no8");
+                    } else {
+                        //no5前面没人，那么改变此时队列最开头的那个人的名字为no0
+                        $("#adviser li:first").attr("class", "no8");
+                    }
+                    //发现写完上面的程序之后，no6的行内样式还是json0的位置，所以强制：
+                    $(".no8").css(json8);
+                }
+            }
+        );
+        $(".prev").click(
+            function() {
+                if (!$("#adviser li").is(":animated")) {
+                    $(".no0").animate(json1, 400);
+                    $(".no1").animate(json2, 400);
+                    $(".no2").animate(json3, 400);
+                    $(".no3").animate(json4, 400);
+                    $(".no4").animate(json5, 400);
+                    $(".no5").animate(json6, 400);
+                    $(".no6").animate(json7, 400);
+                    $(".no7").animate(json8, 400);
+                    $(".no8").css(json0);
+                    $(".no8").attr("class", "wait");
+                    $(".no7").attr("class", "no8").find(".info").hide();
+                    $(".no6").attr("class", "no7").find(".info").hide();
+                    $(".no5").attr("class", "no6").find(".info").hide();
+                    $(".no4").attr("class", "no5").find(".info").hide();
+                    $(".no3").attr("class", "no4").find(".info").fadeIn(1000).find("input[type='text']").val("");
+                    $(".no2").attr("class", "no3").find(".info").hide();
+                    $(".no1").attr("class", "no2").find(".info").hide();
+                    $(".no0").attr("class", "no1").find(".info").hide();
+                    //上面的交换身份，把no0搞没了！所以，我们让no1前面那个人改名为no0
+                    if ($(".no1").prev().length != 0) {
+                        //如果no1前面有人，那么改变这个人的姓名为no0
+                        $(".no1").prev().attr("class", "no0");
+                    } else {
+                        //no1前面没人，那么改变此时队列最后的那个人的名字为no0
+                        $("#adviser li:last").attr("class", "no0");
+                    }
+                    $(".no0").css(json0);
+                }
+            }
+        );
+    }
+);
+
+</script>
