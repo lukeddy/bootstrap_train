@@ -34,6 +34,52 @@
             <div class="tab-pane fade" id="tab_settings_content">settings...</div>
         </div>
     </div>
+    <h3>Tab模版,鼠标滑过切换</h3>
+    <div id="hoverTabBox" class="row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li><a href="#tab_home_content2" data-toggle="tab">Home</a></li>
+            <li><a href="#tab_profile_content2" data-toggle="tab">Profile</a></li>
+            <li><a href="#tab_messages_content2" data-toggle="tab">Messages</a></li>
+            <li><a href="#tab_settings_content2" data-toggle="tab">Settings</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <br>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab_home_content2">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Cras sit amet nibh libero</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="tab_profile_content2">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">Dapibus ac facilisis in</li>
+                    <li class="list-group-item ">Cras sit amet nibh libero</li>
+                    <li class="list-group-item ">Porta ac consectetur ac</li>
+                    <li class="list-group-item ">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="tab_messages_content2">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-warning">Dapibus ac facilisis in</li>
+                    <li class="list-group-item ">Cras sit amet nibh libero</li>
+                    <li class="list-group-item ">Porta ac consectetur ac</li>
+                    <li class="list-group-item ">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="tab_settings_content2">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">Dapibus ac facilisis in</li>
+                    <li class="list-group-item ">Cras sit amet nibh libero</li>
+                    <li class="list-group-item ">Porta ac consectetur ac</li>
+                    <li class="list-group-item ">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
     <h3>默认Tab</h3>
@@ -271,3 +317,11 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+<script>
+    $(function(){
+        //滑过tab切换脚本
+        $('#hoverTabBox .nav-tabs > li > a').hover(function() {
+            $(this).tab('show');
+        });
+    });
+</script>
