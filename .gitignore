@@ -1,1 +1,17 @@
 /bootstrap_train/.idea
+.idea
+.DS_Store
+bootstrap_train/.DS_Store
+mobile_train/.DS_Store
+website_parallax/.DS_Store
+.idea/bootstrap_train.iml
+.idea/compiler.xml
+.idea/copyright
+.idea/encodings.xml
+.idea/inspectionProfiles
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
